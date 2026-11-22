@@ -1,0 +1,5 @@
+# Academic homepage of Wang Jia. All crawlers, including AI crawlers, are welcome.
+User-agent: *
+Allow: /
+
+Sitemap: https://jia-wang-2026.github.io/sitemap.xml
