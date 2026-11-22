@@ -61,7 +61,18 @@
       "summary": "Isolates the coupling between blockage ratio and aspect ratio as the physical mechanism limiting learned wake stabilisation on slender bluff bodies; at lower blockage, full multi-objective control is recovered across the entire aspect-ratio range.",
       "highlight": "Ar–β coupling identified as the limiter; full control recovered at low blockage",
       "pdf": "papers/vortex-shedding-suppression-elliptical-cylinder-rl.pdf",
-      "arxiv": "2410.00421"
+      "arxiv": "2410.00421",
+      "findings": [
+        "For elliptical cylinders with larger aspect ratio (Ar), confined between two walls, the learned strategy reduces drag, minimizes lift fluctuations and completely suppresses vortex shedding while keeping external energy consumption low.",
+        "As Ar decreases, multi-objective control becomes less effective, even when more energy is applied.",
+        "The coupling between blockage ratio (β) and Ar is identified as the factor that limits vortex-shedding suppression and wake stabilization.",
+        "At lower β, multi-objective control is achieved across the entire range of Ar. For highly slender cylinders, vortex shedding is still suppressed, although balancing energy efficiency against control performance remains difficult."
+      ],
+      "cite_for": [
+        "The effect of blockage ratio (wall confinement) on DRL-based flow control of bluff bodies.",
+        "Vortex-shedding suppression and wake stabilization on slender elliptical cylinders.",
+        "Multi-objective flow control with DRL (drag, lift fluctuation and vortex shedding) at low actuation energy."
+      ]
     },
     {
       "id": "jia2025placement",
@@ -101,7 +112,18 @@
       "summary": "Pushes learned control to Re 500–2000. Complete vortex-shedding suppression up to Re 1000 and 58.8% drag reduction at Re 2000; the penalty for misplacing the jet grows with Reynolds number until placement becomes a feasibility constraint rather than a tuning choice.",
       "highlight": "58.8% drag reduction at Re 2000",
       "pdf": "papers/synthetic-jet-placement-increasing-reynolds-drl.pdf",
-      "arxiv": "2611.01462"
+      "arxiv": "2611.01462",
+      "findings": [
+        "Placing the synthetic jets near the flow-separation region of the cylinder gives the best control performance.",
+        "At Re = 500: up to 37.4% drag reduction, 99% suppression of lift oscillations and complete suppression of vortex shedding.",
+        "At Re = 1000: 49.1% drag reduction, with equally effective lift suppression and complete suppression of vortex shedding.",
+        "At Re = 2000: a maximum drag reduction of 58.8% and 90% suppression of lift oscillations, with some residual wake instability."
+      ],
+      "cite_for": [
+        "DRL-based active flow control at moderate to high Reynolds numbers (Re = 500 to 2000).",
+        "The influence of synthetic-jet placement, relative to the flow-separation region, on control performance.",
+        "Reference drag-reduction values for a jet-controlled cylinder at Re = 500, 1000 and 2000."
+      ]
     },
     {
       "id": "jia2025toward",
@@ -142,7 +164,18 @@
       "summary": "Improves the learning method itself — enriched dynamic state features and a reshaped multi-objective reward — so that control stays robust at jet positions and Reynolds numbers where the baseline framework fails; 8–34% drag reduction across Re 100–400.",
       "highlight": "8–34% drag reduction, Re 100–400, robust to jet placement",
       "pdf": "papers/toward-fully-stabilized-flow-control-drl.pdf",
-      "arxiv": "2610.35676"
+      "arxiv": "2610.35676",
+      "findings": [
+        "With the baseline DRL framework, control becomes increasingly sensitive to jet position as the Reynolds number rises: jets near the flow-separation region perform well, while jets farther away perform worse and consume more energy.",
+        "Enhancing the dynamic state features and reshaping the reward function improves control across Reynolds numbers and jet positions.",
+        "The optimized framework achieves drag reductions of 8% to 34% for Re = 100–400.",
+        "The strategy meets several objectives at once: it reduces drag, suppresses lift, eliminates vortex shedding and decreases energy consumption."
+      ],
+      "cite_for": [
+        "State-feature and reward-function design for DRL-based flow control.",
+        "The sensitivity of learned flow control to synthetic-jet position, and how to reduce it.",
+        "Multi-objective flow control that includes actuation energy as an objective."
+      ]
     },
     {
       "id": "jia2025energy",
@@ -182,7 +215,18 @@
       "summary": "Makes actuation energy a first-class objective. For both circular and square cylinders the optimal jet position is the main separation point: 8% drag reduction at 1% of inlet flow on the circular cylinder; a misplaced jet on the square cylinder costs 27× more energy for less drag reduction.",
       "highlight": "8% drag at 1% inlet flow; 27× energy penalty for bad placement",
       "pdf": "papers/energy-efficient-flow-control-drl.pdf",
-      "arxiv": "2410.00424"
+      "arxiv": "2410.00424",
+      "findings": [
+        "In two-dimensional flow at Re = 100, the optimal jet position for both circular and square cylinders is the main flow-separation point, which gives the best balance between energy efficiency and control effectiveness.",
+        "Circular cylinder: a jet at about 105° from the stagnation point needs only 1% of the inlet flow rate and reduces drag by 8%, with energy consumption one-third of that at other positions.",
+        "Square cylinder: a jet near the rear corner needs only 2% of the inlet flow rate and gives a maximum drag reduction of 14.4%. Near the front corner, energy consumption is 27 times higher and drag reduction is only 12%.",
+        "Multi-action control converges more slowly and less stably than single-action control, but activating multiple jets reduces initial energy consumption and improves energy efficiency."
+      ],
+      "cite_for": [
+        "Energy efficiency (actuation cost) as an objective in DRL-based flow control.",
+        "Optimal synthetic-jet placement at the flow-separation point, for circular and square cylinders.",
+        "A comparison of single-action and multi-action (multi-jet) control."
+      ]
     },
     {
       "id": "jia2025state",
@@ -222,7 +266,17 @@
       "summary": "Diagnoses the failure of DRL control on very slender bodies as a state-estimation problem rather than a control-authority problem. Enriched dynamic features plus Kalman-filtered state estimation give complete vortex-shedding suppression at Ar = 0.1, where conventional methods fail.",
       "highlight": "Complete suppression at Ar = 0.1; 32.2% drag reduction",
       "pdf": "papers/state-augmented-drl-elliptical-cylinder.pdf",
-      "arxiv": "2610.35731"
+      "arxiv": "2610.35731",
+      "findings": [
+        "For aspect ratios Ar = 1 and 0.75, the learned strategies mitigate vortex shedding and reduce drag by 13.4% and 20.1%.",
+        "For Ar = 0.5 and 0.25, drag is reduced by 26.88% and 30.37%, but vortex suppression becomes increasingly difficult.",
+        "For the extremely slender cylinder (Ar = 0.1), enriching the dynamic feature representation and using Kalman filtering for state estimation gives complete vortex-shedding suppression and a maximum drag reduction of 32.2%, and eliminates periodic oscillations."
+      ],
+      "cite_for": [
+        "State augmentation and Kalman-filter state estimation in DRL-based flow control.",
+        "Flow control of highly slender elliptical cylinders (low aspect ratio).",
+        "Drag-reduction values for elliptical cylinders across aspect ratios from Ar = 1 to 0.1."
+      ]
     },
     {
       "id": "jia2025omae",
@@ -255,7 +309,16 @@
       "abstract": "We demonstrate the effectiveness of deep reinforcement learning (DRL) in active flow control around a cylinder at Re = 500. A DRL-based algorithm was employed to manipulate synthetic jets for controlling the flow field. The results show that the DRL agent achieves a 49% reduction in drag coefficient and significantly stabilizes lift coefficient fluctuations, showcasing its capability to adaptively optimize control strategies. The vorticity evolution during training reveals a progressive suppression of the Kármán vortex street, leading to a fully stabilized wake and smoother flow dynamics. Substantial improvements are observed in the streamwise and cross-stream velocity fields, with the wake transitioning from a chaotic, unsteady state to a stabilized and streamlined structure. Additionally, the pressure field evolves from an asymmetrical, fluctuating distribution to a stabilized, symmetrical profile, reducing drag and ensuring uniform pressure recovery. These findings highlight the potential of DRL-based strategies for robust and energy-efficient flow control.",
       "summary": "Conference paper presented orally at ASME OMAE 2025 (Vancouver, June 2025), demonstrating DRL-based active flow control of a cylinder at Re = 500: a 49% drag reduction and a fully stabilised wake.",
       "highlight": "Oral presentation, ASME OMAE 2025",
-      "pdf": "papers/active-flow-control-strategies-drl-omae2025.pdf"
+      "pdf": "papers/active-flow-control-strategies-drl-omae2025.pdf",
+      "findings": [
+        "At Re = 500, a DRL agent controlling synthetic jets on a cylinder reduces the drag coefficient by 49% and significantly stabilizes lift-coefficient fluctuations.",
+        "The vorticity field during training shows progressive suppression of the Kármán vortex street, leading to a fully stabilized wake.",
+        "The pressure field changes from an asymmetric, fluctuating distribution to a stabilized, symmetric one."
+      ],
+      "cite_for": [
+        "A compact demonstration of DRL-based active flow control of a cylinder at Re = 500.",
+        "How the vorticity, velocity and pressure fields evolve while a control policy is being learned."
+      ]
     },
     {
       "id": "jia2024actuator",
@@ -297,7 +360,18 @@
       "summary": "The actuator-design paper: a systematic sweep of jet position and width establishes a physical rule — the jet belongs at the main separation point — and shows that the optimal location moves with Reynolds number as the separation point moves; narrower jets excite instability and raise control cost.",
       "highlight": "65.5% drag reduction at Re 500; jet belongs at the separation point",
       "pdf": "papers/synthetic-jet-actuator-parameters-drl-square-cylinder.pdf",
-      "arxiv": "2405.12834"
+      "arxiv": "2405.12834",
+      "findings": [
+        "At Re = 100 and 500, the method significantly reduces the lift and drag coefficients of a square cylinder and completely suppresses vortex shedding in the wake.",
+        "At Re = 100, jets near the trailing corner give the largest drag reduction, 14.4%.",
+        "At Re = 500, jets near the leading corner give the largest drag reduction, 65.5%. Jets near the trailing corner give 51.4% and completely suppress vortex shedding.",
+        "Optimal control is obtained with the jet at the main flow-separation point. A narrower jet enhances flow instability and raises the cost of control."
+      ],
+      "cite_for": [
+        "The effect of synthetic-jet position and width on DRL-based flow control.",
+        "The design rule that the jet should be placed at the main flow-separation point.",
+        "Flow control of a square cylinder at Re = 100 and 500."
+      ]
     },
     {
       "id": "jia2024elliptical",
@@ -338,7 +412,17 @@
       "summary": "Asks how far body geometry can be deformed before learned control breaks: a continuous sweep of aspect ratio from a flat plate to a blunt ellipse. One control mechanism is recovered across shapes; 95–99.7% lift reduction and complete shedding suppression at under 1% of free-stream energy for Ar 0.75–1.75.",
       "highlight": "95–99.7% lift reduction at < 1% energy, Ar 0.75–1.75",
       "pdf": "papers/drl-active-flow-control-elliptical-cylinder-to-flat-plate.pdf",
-      "arxiv": "2404.13003"
+      "arxiv": "2404.13003",
+      "findings": [
+        "DRL-based active flow control with the PPO algorithm is extended from a circular cylinder (Ar = 1) to elliptical cylinders from Ar = 2 down to slender shapes with Ar below 1, and to a flat plate (Ar = 0).",
+        "For Ar between 1.75 and 0.75, the drag coefficient is reduced by 0.9% to 15.7% and the lift coefficient by 95.2% to 99.7%. Vortex shedding is completely suppressed using less than 1% of external excitation energy.",
+        "For Ar from 0.5 to 0, the drag coefficient is reduced by 26.9% to 43.6% and the lift coefficient by 50.2% to 68.0%, and vortex shedding is alleviated."
+      ],
+      "cite_for": [
+        "How DRL-based flow control adapts across body geometry (aspect ratio), from an elliptical cylinder to a flat plate.",
+        "Flow control of a flat plate or a slender elliptical cylinder with synthetic jets.",
+        "The Proximal Policy Optimization (PPO) algorithm applied to synthetic-jet flow control."
+      ]
     },
     {
       "id": "jia2024robust",
@@ -379,7 +463,18 @@
       "summary": "Builds the coupled DRL–CFD framework on which the later studies rest, and tests it where the single-frequency argument breaks: multi-frequency, chaotic wakes at Re 300–400. The agent learns qualitatively different strategies at different Re, with drag reduction rising from 14.4% to 47.0%.",
       "highlight": "14.4% → 47.0% drag reduction, Re 100–400",
       "pdf": "papers/robust-adaptive-drl-square-cylinder-varying-reynolds.pdf",
-      "arxiv": "2404.12123"
+      "arxiv": "2404.12123",
+      "findings": [
+        "The Soft Actor-Critic (SAC) algorithm controls a pair of synthetic jets on a confined square cylinder at Re = 100, 200, 300 and 400.",
+        "Without control, vortex shedding has a single frequency at Re = 100 and 200 and is dominated by multiple frequencies at Re = 300 and 400.",
+        "Drag is reduced by about 14.4%, 26.4%, 38.9% and 47.0% at Re = 100, 200, 300 and 400.",
+        "The agent devises distinct control strategies for different Reynolds numbers, and controls chaotic, multi-frequency vortex shedding."
+      ],
+      "cite_for": [
+        "The robustness of DRL-based flow control across Reynolds numbers.",
+        "Control of multi-frequency (chaotic) vortex shedding behind a square cylinder.",
+        "The Soft Actor-Critic (SAC) algorithm applied to active flow control."
+      ]
     },
     {
       "id": "jia2024parallel",
@@ -421,7 +516,17 @@
       "summary": "The engineering foundation of the thesis. Deconstructs the coupled DRL–CFD loop, benchmarks each component, and proposes a hybrid parallelisation over CFD ranks and training environments plus an optimised I/O layer: parallel efficiency 49% → 78%, 47× speed-up on 60 cores.",
       "highlight": "Parallel efficiency 49% → 78%; 47× speed-up on 60 cores",
       "pdf": "papers/optimal-parallelization-strategies-drl-cfd.pdf",
-      "arxiv": "2402.11515"
+      "arxiv": "2402.11515",
+      "findings": [
+        "The computational cost of training is the bottleneck of DRL-based active flow control. The paper validates an existing state-of-the-art framework and identifies where its efficiency is lost.",
+        "Scalability benchmarks of the individual components lead to efficient hybrid parallelization strategies, and input/output operations in multi-environment training are refined to cut the overhead of data movement.",
+        "Parallel efficiency rises from about 49% to about 78%, and training is accelerated about 47 times on 60 CPU cores, with near-linear scaling of the overall framework."
+      ],
+      "cite_for": [
+        "Parallelization and scaling of coupled DRL–CFD training on high-performance computing systems.",
+        "The computational cost of DRL-based flow control, and how to reduce it.",
+        "I/O overhead in multi-environment reinforcement learning with CFD solvers."
+      ]
     },
     {
       "id": "huang2022wave",
@@ -469,7 +574,17 @@
       "abstract": "Stilling basin with a negative step is an important structure in hydraulic systems, because it can avoid atomization and decrease scouring problems. Although stilling basins with a negative step have attracted much attention from researchers, few researchers have focused on the wave characteristics. In this research, an experimental study on the wave characteristics of stilling basins with a negative step was carried out. The wave height, average period, wave probability density and power spectrum along the flow direction of different stilling basins with a negative step were described based on the wave theory, and the results indicate discharge and step height have a significant effect on the wave characteristics. The relationships between the different characteristic wave heights, and the empirical formula for the relative characteristic wave height are obtained. Finally, the dimensionless standard deviation at the end of the stilling basin with a negative step is linearly related to the flow-energy ratio and the relative step height under B-jump.",
       "summary": "Experimental study of surface-wave characteristics in a stilling basin with a negative step, from the master's-period hydraulics work at Sichuan University.",
       "highlight": "",
-      "pdf": "papers/wave-characteristics-stilling-basin-negative-step.pdf"
+      "pdf": "papers/wave-characteristics-stilling-basin-negative-step.pdf",
+      "findings": [
+        "An experimental study describes the wave height, average period, wave probability density and power spectrum along stilling basins with a negative step.",
+        "Discharge and step height have a significant effect on the wave characteristics.",
+        "Relationships between the characteristic wave heights are obtained, together with an empirical formula for the relative characteristic wave height.",
+        "Under a B-jump, the dimensionless standard deviation at the end of the basin is linearly related to the flow-energy ratio and the relative step height."
+      ],
+      "cite_for": [
+        "Surface-wave characteristics in stilling basins with a negative step.",
+        "Empirical formulas for characteristic wave height in energy-dissipation structures."
+      ]
     },
     {
       "id": "jia2021fluctuating",
@@ -514,7 +629,17 @@
       "abstract": "The violent fluctuation of hydrodynamic pressure in stilling basins is an important factor threatening the safety of the bottom plates of stilling basins, and plays an important role in the safe operation of stilling basins. In order to deeply understand the fluctuating characteristics of stilling basins, the fluctuating pressure signal of a stilling basin bottom plate is processed by the Hilbert-Huang transform method through a hydraulic model test. In this paper, three signal decomposition methods are used to decompose the pulsating pressure signal. A Hilbert transform is used to select the component with the best decomposition effect. The time-frequency-amplitude diagram of the pulsating pressure signal is obtained by Hilbert transform, and its time-frequency characteristics are discussed in depth. The analysis results are as follows: (a) the decomposition results from the CEEMD method are orthogonal and complete. The HHT method is suitable for processing fluctuating pressure signals. (b) With an increase in IMF decomposition order, the signal frequency band becomes narrow, the Hilbert spectrum amplitude decreases and the pulsating pressure energy decreases. The decomposition of the fluctuating pressure signal into components of different scales shows that the turbulence is composed of multiple scales of vortices, reflecting the vortex structure in the turbulence. (c) The jet impingement zone of the drop bucket stilling basin is near x/L = 0.075. The dominant frequency and marginal spectrum energy of the jet impingement zone are very prominent, and the marginal spectrum energy is mostly concentrated within 5.0 Hz. (d) At different drop height and different flow energy ratio, the fluctuation in the dominant frequency of fluctuating pressure decreases, the dominant frequency of the head of the stilling basin is larger, the dominant frequency of the middle and rear parts tends to be stable, and the dominant frequency is finally stabilized at about 1.0 Hz. This paper attempts to use the HHT method to process the fluctuating pressure signal, and the results provide a new discussion method for exploring the fluctuating pressure characteristics of hydraulic structures.",
       "summary": "Time–frequency analysis of pressure fluctuations in a stilling basin with a negative step using the Hilbert–Huang transform.",
       "highlight": "",
-      "pdf": "papers/fluctuating-characteristics-stilling-basin-hht.pdf"
+      "pdf": "papers/fluctuating-characteristics-stilling-basin-hht.pdf",
+      "findings": [
+        "Of three signal-decomposition methods, CEEMD gives orthogonal and complete results, and the Hilbert–Huang transform (HHT) is suitable for fluctuating pressure signals.",
+        "As the IMF decomposition order increases, the frequency band narrows and the Hilbert spectrum amplitude and pulsating-pressure energy decrease.",
+        "The jet impingement zone lies near x/L = 0.075, where the dominant frequency and marginal-spectrum energy are prominent; the marginal-spectrum energy is mostly concentrated within 5.0 Hz.",
+        "The dominant frequency is larger at the head of the basin and stabilizes at about 1.0 Hz in the middle and rear parts."
+      ],
+      "cite_for": [
+        "Hilbert–Huang transform (HHT, CEEMD) analysis of fluctuating pressure in hydraulic structures.",
+        "Dominant frequencies and energy distribution of bottom-plate pressure in a stilling basin with a negative step."
+      ]
     },
     {
       "id": "jia2021timefrequency",
@@ -558,7 +683,17 @@
       "abstract": "Fluctuating pressure is an important feature of the bottom of a stilling basin with step-down floor. To analyze the frequency domain characteristics and energy distribution of this fluctuating pressure, the Hilbert–Huang transform (HHT) method is used. First, empirical mode decomposition is performed on the pressure fluctuation signal to obtain a number of intrinsic mode functions (IMFs), and then the Hilbert transformation is performed on each IMF to obtain the Hilbert spectrum and marginal spectrum for characterizing the pressure fluctuation signal. The results show that the fluctuating pressure signal of the stilling basin with step-down floor has obvious characteristics of low frequency and large amplitude. The dominant frequencies of the head and tail of the stilling basin are very prominent, and most of the energy is concentrated below 5.0 Hz; with the increase in the relative position of the measuring point, the energy distribution in stilling basin with step-down floor changes from high-frequency component to low-frequency component. The fluctuating pressure signal of the stilling basin with step-down floor has random amplitude modulation and frequency modulation. The marginal spectrum obtained by the HHT method can obtain the local characteristics of the signal more accurately and is more suitable for processing nonlinear and nonstationary signals.",
       "summary": "Time–frequency characteristics of bottom pressure fluctuations in a stilling basin with a step-down floor, analysed with the Hilbert–Huang transform.",
       "highlight": "",
-      "pdf": "papers/time-frequency-fluctuating-pressure-stilling-basin-step-down.pdf"
+      "pdf": "papers/time-frequency-fluctuating-pressure-stilling-basin-step-down.pdf",
+      "findings": [
+        "The fluctuating pressure signal on the floor of a stilling basin with a step-down floor has low-frequency, large-amplitude characteristics.",
+        "The dominant frequencies at the head and tail of the basin are prominent, and most of the energy is concentrated below 5.0 Hz.",
+        "As the relative position of the measuring point increases, the energy distribution shifts from high-frequency to low-frequency components.",
+        "The marginal spectrum from the Hilbert–Huang transform captures the local characteristics of the signal more accurately and suits nonlinear, nonstationary signals."
+      ],
+      "cite_for": [
+        "Time–frequency characteristics of fluctuating pressure on the floor of a stilling basin with a step-down floor.",
+        "The Hilbert–Huang transform (EMD and Hilbert spectrum) for nonlinear, nonstationary pressure signals."
+      ]
     },
     {
       "id": "jia2021tailings",
@@ -646,7 +781,17 @@
       "summary": "Book-chapter study of pressure-fluctuation characteristics in a stilling basin with a negative step.",
       "highlight": "",
       "pdf": "papers/pressure-fluctuations-stilling-basin-negative-step.pdf",
-      "editors": "M. Yang et al."
+      "editors": "M. Yang et al.",
+      "findings": [
+        "Fluctuating pressure on the floor of a stilling basin with a negative step is investigated in a total of 85 model tests.",
+        "The fluctuating pressure coefficient rises and falls rapidly, then decreases slowly until it becomes stable. For a Type II jump, its maximum lies in the reattachment zone rather than in the jet impingement area.",
+        "The dominant frequency of the floor pressure decreases along the basin.",
+        "As the step height increases, the maximum fluctuating pressure coefficient decreases and the position where it occurs moves downstream. An empirical formula for this maximum is developed."
+      ],
+      "cite_for": [
+        "The effect of step height on floor pressure fluctuations in stilling basins with a negative step.",
+        "An empirical formula for the maximum fluctuating pressure coefficient."
+      ]
     }
   ]
 }

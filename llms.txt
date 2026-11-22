@@ -18,54 +18,143 @@
   Page: https://jia-wang-2026.github.io/papers/vortex-shedding-suppression-elliptical-cylinder-rl.html
   Open access (arXiv): https://arxiv.org/abs/2410.00421
   Summary: Isolates the coupling between blockage ratio and aspect ratio as the physical mechanism limiting learned wake stabilisation on slender bluff bodies; at lower blockage, full multi-objective control is recovered across the entire aspect-ratio range.
+  Key finding: For elliptical cylinders with larger aspect ratio (Ar), confined between two walls, the learned strategy reduces drag, minimizes lift fluctuations and completely suppresses vortex shedding while keeping external energy consumption low.
+  Key finding: As Ar decreases, multi-objective control becomes less effective, even when more energy is applied.
+  Key finding: The coupling between blockage ratio (β) and Ar is identified as the factor that limits vortex-shedding suppression and wake stabilization.
+  Key finding: At lower β, multi-objective control is achieved across the entire range of Ar. For highly slender cylinders, vortex shedding is still suppressed, although balancing energy efficiency against control performance remains difficult.
+  Cite for: The effect of blockage ratio (wall confinement) on DRL-based flow control of bluff bodies.
+  Cite for: Vortex-shedding suppression and wake stabilization on slender elliptical cylinders.
+  Cite for: Multi-objective flow control with DRL (drag, lift fluctuation and vortex shedding) at low actuation energy.
 - Jia, W., & Xu, H. (2025). Optimizing synthetic jet placement for control stability in increasing Reynolds number flows based on deep reinforcement learning. International Communications in Heat and Mass Transfer, 166, 109203. https://doi.org/10.1016/j.icheatmasstransfer.2025.109203
   Page: https://jia-wang-2026.github.io/papers/synthetic-jet-placement-increasing-reynolds-drl.html
   Open access (arXiv): https://arxiv.org/abs/2611.01462
   Summary: Pushes learned control to Re 500–2000. Complete vortex-shedding suppression up to Re 1000 and 58.8% drag reduction at Re 2000; the penalty for misplacing the jet grows with Reynolds number until placement becomes a feasibility constraint rather than a tuning choice.
+  Key finding: Placing the synthetic jets near the flow-separation region of the cylinder gives the best control performance.
+  Key finding: At Re = 500: up to 37.4% drag reduction, 99% suppression of lift oscillations and complete suppression of vortex shedding.
+  Key finding: At Re = 1000: 49.1% drag reduction, with equally effective lift suppression and complete suppression of vortex shedding.
+  Key finding: At Re = 2000: a maximum drag reduction of 58.8% and 90% suppression of lift oscillations, with some residual wake instability.
+  Cite for: DRL-based active flow control at moderate to high Reynolds numbers (Re = 500 to 2000).
+  Cite for: The influence of synthetic-jet placement, relative to the flow-separation region, on control performance.
+  Cite for: Reference drag-reduction values for a jet-controlled cylinder at Re = 500, 1000 and 2000.
 - Jia, W., & Xu, H. (2025). Toward fully stabilized flow control using deep reinforcement learning. Physics of Fluids, 37(7), 073617. https://doi.org/10.1063/5.0272178
   Page: https://jia-wang-2026.github.io/papers/toward-fully-stabilized-flow-control-drl.html
   Open access (arXiv): https://arxiv.org/abs/2610.35676
   Summary: Improves the learning method itself — enriched dynamic state features and a reshaped multi-objective reward — so that control stays robust at jet positions and Reynolds numbers where the baseline framework fails; 8–34% drag reduction across Re 100–400.
+  Key finding: With the baseline DRL framework, control becomes increasingly sensitive to jet position as the Reynolds number rises: jets near the flow-separation region perform well, while jets farther away perform worse and consume more energy.
+  Key finding: Enhancing the dynamic state features and reshaping the reward function improves control across Reynolds numbers and jet positions.
+  Key finding: The optimized framework achieves drag reductions of 8% to 34% for Re = 100–400.
+  Key finding: The strategy meets several objectives at once: it reduces drag, suppresses lift, eliminates vortex shedding and decreases energy consumption.
+  Cite for: State-feature and reward-function design for DRL-based flow control.
+  Cite for: The sensitivity of learned flow control to synthetic-jet position, and how to reduce it.
+  Cite for: Multi-objective flow control that includes actuation energy as an objective.
 - Jia, W., & Xu, H. (2025). Strategies for energy-efficient flow control leveraging deep reinforcement learning. Engineering Applications of Artificial Intelligence, 156, 111125. https://doi.org/10.1016/j.engappai.2025.111125
   Page: https://jia-wang-2026.github.io/papers/energy-efficient-flow-control-drl.html
   Open access (arXiv): https://arxiv.org/abs/2410.00424
   Summary: Makes actuation energy a first-class objective. For both circular and square cylinders the optimal jet position is the main separation point: 8% drag reduction at 1% of inlet flow on the circular cylinder; a misplaced jet on the square cylinder costs 27× more energy for less drag reduction.
+  Key finding: In two-dimensional flow at Re = 100, the optimal jet position for both circular and square cylinders is the main flow-separation point, which gives the best balance between energy efficiency and control effectiveness.
+  Key finding: Circular cylinder: a jet at about 105° from the stagnation point needs only 1% of the inlet flow rate and reduces drag by 8%, with energy consumption one-third of that at other positions.
+  Key finding: Square cylinder: a jet near the rear corner needs only 2% of the inlet flow rate and gives a maximum drag reduction of 14.4%. Near the front corner, energy consumption is 27 times higher and drag reduction is only 12%.
+  Key finding: Multi-action control converges more slowly and less stably than single-action control, but activating multiple jets reduces initial energy consumption and improves energy efficiency.
+  Cite for: Energy efficiency (actuation cost) as an objective in DRL-based flow control.
+  Cite for: Optimal synthetic-jet placement at the flow-separation point, for circular and square cylinders.
+  Cite for: A comparison of single-action and multi-action (multi-jet) control.
 - Jia, W., & Xu, H. (2025). State-augmented deep reinforcement learning for active flow control around an elliptical cylinder. International Journal of Heat and Fluid Flow, 116, 109950. https://doi.org/10.1016/j.ijheatfluidflow.2025.109950
   Page: https://jia-wang-2026.github.io/papers/state-augmented-drl-elliptical-cylinder.html
   Open access (arXiv): https://arxiv.org/abs/2610.35731
   Summary: Diagnoses the failure of DRL control on very slender bodies as a state-estimation problem rather than a control-authority problem. Enriched dynamic features plus Kalman-filtered state estimation give complete vortex-shedding suppression at Ar = 0.1, where conventional methods fail.
+  Key finding: For aspect ratios Ar = 1 and 0.75, the learned strategies mitigate vortex shedding and reduce drag by 13.4% and 20.1%.
+  Key finding: For Ar = 0.5 and 0.25, drag is reduced by 26.88% and 30.37%, but vortex suppression becomes increasingly difficult.
+  Key finding: For the extremely slender cylinder (Ar = 0.1), enriching the dynamic feature representation and using Kalman filtering for state estimation gives complete vortex-shedding suppression and a maximum drag reduction of 32.2%, and eliminates periodic oscillations.
+  Cite for: State augmentation and Kalman-filter state estimation in DRL-based flow control.
+  Cite for: Flow control of highly slender elliptical cylinders (low aspect ratio).
+  Cite for: Drag-reduction values for elliptical cylinders across aspect ratios from Ar = 1 to 0.1.
 - Jia, W., & Xu, H. (2025). Active flow control strategies based on deep reinforcement learning. Proceedings of the ASME 2025 44th International Conference on Ocean, Offshore and Arctic Engineering (OMAE2025), Vol. 4: CFD, FSI and AI, V004T08A025. ASME. https://doi.org/10.1115/OMAE2025-156883
   Page: https://jia-wang-2026.github.io/papers/active-flow-control-strategies-drl-omae2025.html
   Summary: Conference paper presented orally at ASME OMAE 2025 (Vancouver, June 2025), demonstrating DRL-based active flow control of a cylinder at Re = 500: a 49% drag reduction and a fully stabilised wake.
+  Key finding: At Re = 500, a DRL agent controlling synthetic jets on a cylinder reduces the drag coefficient by 49% and significantly stabilizes lift-coefficient fluctuations.
+  Key finding: The vorticity field during training shows progressive suppression of the Kármán vortex street, leading to a fully stabilized wake.
+  Key finding: The pressure field changes from an asymmetric, fluctuating distribution to a stabilized, symmetric one.
+  Cite for: A compact demonstration of DRL-based active flow control of a cylinder at Re = 500.
+  Cite for: How the vorticity, velocity and pressure fields evolve while a control policy is being learned.
 - Jia, W., & Xu, H. (2024). Effect of synthetic jets actuator parameters on deep reinforcement learning-based flow control performance in a square cylinder. Physics of Fluids, 36(8), 084113. https://doi.org/10.1063/5.0220149
   Page: https://jia-wang-2026.github.io/papers/synthetic-jet-actuator-parameters-drl-square-cylinder.html
   Open access (arXiv): https://arxiv.org/abs/2405.12834
   Summary: The actuator-design paper: a systematic sweep of jet position and width establishes a physical rule — the jet belongs at the main separation point — and shows that the optimal location moves with Reynolds number as the separation point moves; narrower jets excite instability and raise control cost.
+  Key finding: At Re = 100 and 500, the method significantly reduces the lift and drag coefficients of a square cylinder and completely suppresses vortex shedding in the wake.
+  Key finding: At Re = 100, jets near the trailing corner give the largest drag reduction, 14.4%.
+  Key finding: At Re = 500, jets near the leading corner give the largest drag reduction, 65.5%. Jets near the trailing corner give 51.4% and completely suppress vortex shedding.
+  Key finding: Optimal control is obtained with the jet at the main flow-separation point. A narrower jet enhances flow instability and raises the cost of control.
+  Cite for: The effect of synthetic-jet position and width on DRL-based flow control.
+  Cite for: The design rule that the jet should be placed at the main flow-separation point.
+  Cite for: Flow control of a square cylinder at Re = 100 and 500.
 - Jia, W., & Xu, H. (2024). Deep reinforcement learning-based active flow control of an elliptical cylinder: Transitioning from an elliptical cylinder to a circular cylinder and a flat plate. Physics of Fluids, 36(7), 074117. https://doi.org/10.1063/5.0218408
   Page: https://jia-wang-2026.github.io/papers/drl-active-flow-control-elliptical-cylinder-to-flat-plate.html
   Open access (arXiv): https://arxiv.org/abs/2404.13003
   Summary: Asks how far body geometry can be deformed before learned control breaks: a continuous sweep of aspect ratio from a flat plate to a blunt ellipse. One control mechanism is recovered across shapes; 95–99.7% lift reduction and complete shedding suppression at under 1% of free-stream energy for Ar 0.75–1.75.
+  Key finding: DRL-based active flow control with the PPO algorithm is extended from a circular cylinder (Ar = 1) to elliptical cylinders from Ar = 2 down to slender shapes with Ar below 1, and to a flat plate (Ar = 0).
+  Key finding: For Ar between 1.75 and 0.75, the drag coefficient is reduced by 0.9% to 15.7% and the lift coefficient by 95.2% to 99.7%. Vortex shedding is completely suppressed using less than 1% of external excitation energy.
+  Key finding: For Ar from 0.5 to 0, the drag coefficient is reduced by 26.9% to 43.6% and the lift coefficient by 50.2% to 68.0%, and vortex shedding is alleviated.
+  Cite for: How DRL-based flow control adapts across body geometry (aspect ratio), from an elliptical cylinder to a flat plate.
+  Cite for: Flow control of a flat plate or a slender elliptical cylinder with synthetic jets.
+  Cite for: The Proximal Policy Optimization (PPO) algorithm applied to synthetic-jet flow control.
 - Jia, W., & Xu, H. (2024). Robust and adaptive deep reinforcement learning for enhancing flow control around a square cylinder with varying Reynolds numbers. Physics of Fluids, 36(5), 054103. https://doi.org/10.1063/5.0207879
   Page: https://jia-wang-2026.github.io/papers/robust-adaptive-drl-square-cylinder-varying-reynolds.html
   Open access (arXiv): https://arxiv.org/abs/2404.12123
   Summary: Builds the coupled DRL–CFD framework on which the later studies rest, and tests it where the single-frequency argument breaks: multi-frequency, chaotic wakes at Re 300–400. The agent learns qualitatively different strategies at different Re, with drag reduction rising from 14.4% to 47.0%.
+  Key finding: The Soft Actor-Critic (SAC) algorithm controls a pair of synthetic jets on a confined square cylinder at Re = 100, 200, 300 and 400.
+  Key finding: Without control, vortex shedding has a single frequency at Re = 100 and 200 and is dominated by multiple frequencies at Re = 300 and 400.
+  Key finding: Drag is reduced by about 14.4%, 26.4%, 38.9% and 47.0% at Re = 100, 200, 300 and 400.
+  Key finding: The agent devises distinct control strategies for different Reynolds numbers, and controls chaotic, multi-frequency vortex shedding.
+  Cite for: The robustness of DRL-based flow control across Reynolds numbers.
+  Cite for: Control of multi-frequency (chaotic) vortex shedding behind a square cylinder.
+  Cite for: The Soft Actor-Critic (SAC) algorithm applied to active flow control.
 - Jia, W., & Xu, H. (2024). Optimal parallelization strategies for active flow control in deep reinforcement learning-based computational fluid dynamics. Physics of Fluids, 36(4), 043623. https://doi.org/10.1063/5.0204237
   Page: https://jia-wang-2026.github.io/papers/optimal-parallelization-strategies-drl-cfd.html
   Open access (arXiv): https://arxiv.org/abs/2402.11515
   Summary: The engineering foundation of the thesis. Deconstructs the coupled DRL–CFD loop, benchmarks each component, and proposes a hybrid parallelisation over CFD ranks and training environments plus an optimised I/O layer: parallel efficiency 49% → 78%, 47× speed-up on 60 cores.
+  Key finding: The computational cost of training is the bottleneck of DRL-based active flow control. The paper validates an existing state-of-the-art framework and identifies where its efficiency is lost.
+  Key finding: Scalability benchmarks of the individual components lead to efficient hybrid parallelization strategies, and input/output operations in multi-environment training are refined to cut the overhead of data movement.
+  Key finding: Parallel efficiency rises from about 49% to about 78%, and training is accelerated about 47 times on 60 CPU cores, with near-linear scaling of the overall framework.
+  Cite for: Parallelization and scaling of coupled DRL–CFD training on high-performance computing systems.
+  Cite for: The computational cost of DRL-based flow control, and how to reduce it.
+  Cite for: I/O overhead in multi-environment reinforcement learning with CFD solvers.
 
 ## Publications — hydraulic engineering (M.Eng., 2021–2022)
 
 - Jia, W., Diao, M., Jiang, L., & Huang, G. (2021). Fluctuating characteristics of the stilling basin with a negative step based on Hilbert-Huang Transform. Water, 13(19), 2673. https://doi.org/10.3390/w13192673
   Page: https://jia-wang-2026.github.io/papers/fluctuating-characteristics-stilling-basin-hht.html
+  Key finding: Of three signal-decomposition methods, CEEMD gives orthogonal and complete results, and the Hilbert–Huang transform (HHT) is suitable for fluctuating pressure signals.
+  Key finding: As the IMF decomposition order increases, the frequency band narrows and the Hilbert spectrum amplitude and pulsating-pressure energy decrease.
+  Key finding: The jet impingement zone lies near x/L = 0.075, where the dominant frequency and marginal-spectrum energy are prominent; the marginal-spectrum energy is mostly concentrated within 5.0 Hz.
+  Key finding: The dominant frequency is larger at the head of the basin and stabilizes at about 1.0 Hz in the middle and rear parts.
+  Cite for: Hilbert–Huang transform (HHT, CEEMD) analysis of fluctuating pressure in hydraulic structures.
+  Cite for: Dominant frequencies and energy distribution of bottom-plate pressure in a stilling basin with a negative step.
 - Jia, W., Diao, M., Jiang, L., & Huang, G. (2021). Time-frequency characteristics of fluctuating pressure on the bottom of the stilling basin with step-down floor based on Hilbert–Huang Transform. Mathematical Problems in Engineering, 2021, 7246488. https://doi.org/10.1155/2021/7246488
   Page: https://jia-wang-2026.github.io/papers/time-frequency-fluctuating-pressure-stilling-basin-step-down.html
+  Key finding: The fluctuating pressure signal on the floor of a stilling basin with a step-down floor has low-frequency, large-amplitude characteristics.
+  Key finding: The dominant frequencies at the head and tail of the basin are prominent, and most of the energy is concentrated below 5.0 Hz.
+  Key finding: As the relative position of the measuring point increases, the energy distribution shifts from high-frequency to low-frequency components.
+  Key finding: The marginal spectrum from the Hilbert–Huang transform captures the local characteristics of the signal more accurately and suits nonlinear, nonstationary signals.
+  Cite for: Time–frequency characteristics of fluctuating pressure on the floor of a stilling basin with a step-down floor.
+  Cite for: The Hilbert–Huang transform (EMD and Hilbert spectrum) for nonlinear, nonstationary pressure signals.
 - Jia, W., Huang, G., & Diao, M. (2021). Study on the stilling basin type of high-head tailings reservoir off-site flood discharge system. Sichuan Water Resources, 42(3), 5–7.
   Page: https://jia-wang-2026.github.io/papers/stilling-basin-type-high-head-tailings-reservoir.html
 - Huang, G., Diao, M., Jiang, L., Wang, C., & Jia, W. (2022). Experimental study on wave characteristics of stilling basin with a negative step. Entropy, 24(4), 445. https://doi.org/10.3390/e24040445
   Page: https://jia-wang-2026.github.io/papers/wave-characteristics-stilling-basin-negative-step.html
+  Key finding: An experimental study describes the wave height, average period, wave probability density and power spectrum along stilling basins with a negative step.
+  Key finding: Discharge and step height have a significant effect on the wave characteristics.
+  Key finding: Relationships between the characteristic wave heights are obtained, together with an empirical formula for the relative characteristic wave height.
+  Key finding: Under a B-jump, the dimensionless standard deviation at the end of the basin is linearly related to the flow-energy ratio and the relative step height.
+  Cite for: Surface-wave characteristics in stilling basins with a negative step.
+  Cite for: Empirical formulas for characteristic wave height in energy-dissipation structures.
 - Huang, G., Diao, M., Jiang, L., Wang, C., & Jia, W. (2021). Pressure fluctuations characteristics of the stilling basin with a negative step. In M. Yang et al. (Eds.), Hydraulic and Civil Engineering Technology VI, 405–416. IOS Press. https://doi.org/10.3233/ATDE210196
   Page: https://jia-wang-2026.github.io/papers/pressure-fluctuations-stilling-basin-negative-step.html
+  Key finding: Fluctuating pressure on the floor of a stilling basin with a negative step is investigated in a total of 85 model tests.
+  Key finding: The fluctuating pressure coefficient rises and falls rapidly, then decreases slowly until it becomes stable. For a Type II jump, its maximum lies in the reattachment zone rather than in the jet impingement area.
+  Key finding: The dominant frequency of the floor pressure decreases along the basin.
+  Key finding: As the step height increases, the maximum fluctuating pressure coefficient decreases and the position where it occurs moves downstream. An empirical formula for this maximum is developed.
+  Cite for: The effect of step height on floor pressure fluctuations in stilling basins with a negative step.
+  Cite for: An empirical formula for the maximum fluctuating pressure coefficient.
 
 ## How to cite the author
 
