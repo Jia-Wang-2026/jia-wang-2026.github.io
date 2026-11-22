@@ -121,13 +121,16 @@ footer .who p{margin:0;color:var(--mute)}
 footer ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 20px;align-content:flex-start}
 footer small{flex-basis:100%;color:var(--faint);font-size:12.5px}
 /* paper page */
-.paper{padding:56px 0 24px;max-width:800px}
+.paper{padding-top:56px;padding-bottom:24px;max-width:848px}
 .paper .crumb{font-size:14px;margin:0 0 24px}
 .paper h1{font-size:clamp(28px,4vw,40px);line-height:1.15;margin:0 0 16px}
 .paper .meta{font-size:16px;color:var(--ink2);margin:0 0 8px}
 .paper .doi{font-size:14px;margin:0 0 28px}
 .paper h2{font-size:20px;margin:32px 0 10px}
 .paper p.abs{font-size:16px;line-height:1.65;text-wrap:pretty}
+.paper ul.pts{margin:0;padding-left:22px;font-size:16px;line-height:1.6}
+.paper ul.pts li{margin:0 0 8px;text-wrap:pretty}
+.paper p.lead-in{margin:0 0 8px;font-size:15px;color:var(--mute)}
 .paper .kw{display:flex;flex-wrap:wrap;gap:8px;font-size:13px}
 .paper .kw span{padding:4px 10px;border-radius:4px;background:var(--bg2);color:var(--ink2)}
 .paper pre{padding:14px 16px;border-radius:6px;background:var(--bg2);font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-x:auto}
@@ -149,6 +152,8 @@ footer small{flex-basis:100%;color:var(--faint);font-size:12.5px}
 <p class="doi">DOI: <a href="https://doi.org/10.3390/w13192673">10.3390/w13192673</a></p>
 <div class="ctas"><a class="btn primary" href="https://doi.org/10.3390/w13192673" rel="noopener">Publisher version (DOI)</a><a class="btn" href="../papers/fluctuating-characteristics-stilling-basin-hht.pdf">PDF</a><a class="btn" href="../publications.bib">All BibTeX</a></div>
 <h2>Abstract</h2><p class="abs">The violent fluctuation of hydrodynamic pressure in stilling basins is an important factor threatening the safety of the bottom plates of stilling basins, and plays an important role in the safe operation of stilling basins. In order to deeply understand the fluctuating characteristics of stilling basins, the fluctuating pressure signal of a stilling basin bottom plate is processed by the Hilbert-Huang transform method through a hydraulic model test. In this paper, three signal decomposition methods are used to decompose the pulsating pressure signal. A Hilbert transform is used to select the component with the best decomposition effect. The time-frequency-amplitude diagram of the pulsating pressure signal is obtained by Hilbert transform, and its time-frequency characteristics are discussed in depth. The analysis results are as follows: (a) the decomposition results from the CEEMD method are orthogonal and complete. The HHT method is suitable for processing fluctuating pressure signals. (b) With an increase in IMF decomposition order, the signal frequency band becomes narrow, the Hilbert spectrum amplitude decreases and the pulsating pressure energy decreases. The decomposition of the fluctuating pressure signal into components of different scales shows that the turbulence is composed of multiple scales of vortices, reflecting the vortex structure in the turbulence. (c) The jet impingement zone of the drop bucket stilling basin is near x/L = 0.075. The dominant frequency and marginal spectrum energy of the jet impingement zone are very prominent, and the marginal spectrum energy is mostly concentrated within 5.0 Hz. (d) At different drop height and different flow energy ratio, the fluctuation in the dominant frequency of fluctuating pressure decreases, the dominant frequency of the head of the stilling basin is larger, the dominant frequency of the middle and rear parts tends to be stable, and the dominant frequency is finally stabilized at about 1.0 Hz. This paper attempts to use the HHT method to process the fluctuating pressure signal, and the results provide a new discussion method for exploring the fluctuating pressure characteristics of hydraulic structures.</p>
+<h2 id="findings">Key findings</h2><ul class="pts"><li>Of three signal-decomposition methods, CEEMD gives orthogonal and complete results, and the Hilbert–Huang transform (HHT) is suitable for fluctuating pressure signals.</li><li>As the IMF decomposition order increases, the frequency band narrows and the Hilbert spectrum amplitude and pulsating-pressure energy decrease.</li><li>The jet impingement zone lies near x/L = 0.075, where the dominant frequency and marginal-spectrum energy are prominent; the marginal-spectrum energy is mostly concentrated within 5.0 Hz.</li><li>The dominant frequency is larger at the head of the basin and stabilizes at about 1.0 Hz in the middle and rear parts.</li></ul>
+<h2 id="when-to-cite">When to cite this paper</h2><p class="lead-in">Cite this paper for:</p><ul class="pts"><li>Hilbert–Huang transform (HHT, CEEMD) analysis of fluctuating pressure in hydraulic structures.</li><li>Dominant frequencies and energy distribution of bottom-plate pressure in a stilling basin with a negative step.</li></ul>
 <h2>In one paragraph</h2><p class="abs">Time–frequency analysis of pressure fluctuations in a stilling basin with a negative step using the Hilbert–Huang transform.</p>
 <h2>Keywords</h2>
 <div class="kw"><span>dominant frequency</span><span>fluctuating pressure</span><span>HHT</span><span>Hilbert marginal spectrum</span><span>stilling basin with a negative step</span></div>

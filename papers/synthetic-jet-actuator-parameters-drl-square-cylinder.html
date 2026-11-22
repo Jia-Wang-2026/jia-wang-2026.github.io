@@ -123,13 +123,16 @@ footer .who p{margin:0;color:var(--mute)}
 footer ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 20px;align-content:flex-start}
 footer small{flex-basis:100%;color:var(--faint);font-size:12.5px}
 /* paper page */
-.paper{padding:56px 0 24px;max-width:800px}
+.paper{padding-top:56px;padding-bottom:24px;max-width:848px}
 .paper .crumb{font-size:14px;margin:0 0 24px}
 .paper h1{font-size:clamp(28px,4vw,40px);line-height:1.15;margin:0 0 16px}
 .paper .meta{font-size:16px;color:var(--ink2);margin:0 0 8px}
 .paper .doi{font-size:14px;margin:0 0 28px}
 .paper h2{font-size:20px;margin:32px 0 10px}
 .paper p.abs{font-size:16px;line-height:1.65;text-wrap:pretty}
+.paper ul.pts{margin:0;padding-left:22px;font-size:16px;line-height:1.6}
+.paper ul.pts li{margin:0 0 8px;text-wrap:pretty}
+.paper p.lead-in{margin:0 0 8px;font-size:15px;color:var(--mute)}
 .paper .kw{display:flex;flex-wrap:wrap;gap:8px;font-size:13px}
 .paper .kw span{padding:4px 10px;border-radius:4px;background:var(--bg2);color:var(--ink2)}
 .paper pre{padding:14px 16px;border-radius:6px;background:var(--bg2);font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-x:auto}
@@ -151,6 +154,8 @@ footer small{flex-basis:100%;color:var(--faint);font-size:12.5px}
 <p class="doi">DOI: <a href="https://doi.org/10.1063/5.0220149">10.1063/5.0220149</a></p>
 <div class="ctas"><a class="btn primary" href="https://doi.org/10.1063/5.0220149" rel="noopener">Publisher version (DOI)</a><a class="btn" href="https://arxiv.org/abs/2405.12834" rel="noopener">Open version (arXiv:2405.12834)</a><a class="btn" href="../papers/synthetic-jet-actuator-parameters-drl-square-cylinder.pdf">PDF</a><a class="btn" href="../publications.bib">All BibTeX</a></div>
 <h2>Abstract</h2><p class="abs">We conduct an active flow control study on the mass flow rate of synthetic jets on the upper and lower surfaces of a square cylinder using a deep reinforcement learning algorithm, with a focus on investigating the influence of the position and width of the synthetic jets on the flow control performance. At Reynolds numbers (Re) of 100 and 500, it is found that our proposed method significantly reduced the lift and drag coefficients of the square cylinder and completely suppressed vortex shedding in the wake. In particular, at Re = 100, placing the synthetic jets near the tail corner was beneficial for reducing drag, with a maximum drag reduction rate of 14.4%. When Re = 500, positioning the synthetic jets near the leading edge corner resulted in a maximum optimal drag reduction effect of 65.5%. This indicates that locating the synthetic jet at the main flow separation point can achieve optimal control. Furthermore, we notice that when the synthetic jets are positioned near the tail corner, vortex shedding can be completely suppressed. Additionally, a narrower width of the synthetic jets can enhance flow instability and increase the cost of flow control.</p>
+<h2 id="findings">Key findings</h2><ul class="pts"><li>At Re = 100 and 500, the method significantly reduces the lift and drag coefficients of a square cylinder and completely suppresses vortex shedding in the wake.</li><li>At Re = 100, jets near the trailing corner give the largest drag reduction, 14.4%.</li><li>At Re = 500, jets near the leading corner give the largest drag reduction, 65.5%. Jets near the trailing corner give 51.4% and completely suppress vortex shedding.</li><li>Optimal control is obtained with the jet at the main flow-separation point. A narrower jet enhances flow instability and raises the cost of control.</li></ul>
+<h2 id="when-to-cite">When to cite this paper</h2><p class="lead-in">Cite this paper for:</p><ul class="pts"><li>The effect of synthetic-jet position and width on DRL-based flow control.</li><li>The design rule that the jet should be placed at the main flow-separation point.</li><li>Flow control of a square cylinder at Re = 100 and 500.</li></ul>
 <h2>In one paragraph</h2><p class="abs">The actuator-design paper: a systematic sweep of jet position and width establishes a physical rule — the jet belongs at the main separation point — and shows that the optimal location moves with Reynolds number as the separation point moves; narrower jets excite instability and raise control cost.</p>
 <h2>Keywords</h2>
 <div class="kw"><span>deep reinforcement learning</span><span>active flow control</span><span>square cylinder</span><span>synthetic jet</span><span>actuator placement</span><span>jet width</span><span>flow separation</span><span>drag reduction</span></div>

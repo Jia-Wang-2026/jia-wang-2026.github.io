@@ -114,13 +114,16 @@ footer .who p{margin:0;color:var(--mute)}
 footer ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 20px;align-content:flex-start}
 footer small{flex-basis:100%;color:var(--faint);font-size:12.5px}
 /* paper page */
-.paper{padding:56px 0 24px;max-width:800px}
+.paper{padding-top:56px;padding-bottom:24px;max-width:848px}
 .paper .crumb{font-size:14px;margin:0 0 24px}
 .paper h1{font-size:clamp(28px,4vw,40px);line-height:1.15;margin:0 0 16px}
 .paper .meta{font-size:16px;color:var(--ink2);margin:0 0 8px}
 .paper .doi{font-size:14px;margin:0 0 28px}
 .paper h2{font-size:20px;margin:32px 0 10px}
 .paper p.abs{font-size:16px;line-height:1.65;text-wrap:pretty}
+.paper ul.pts{margin:0;padding-left:22px;font-size:16px;line-height:1.6}
+.paper ul.pts li{margin:0 0 8px;text-wrap:pretty}
+.paper p.lead-in{margin:0 0 8px;font-size:15px;color:var(--mute)}
 .paper .kw{display:flex;flex-wrap:wrap;gap:8px;font-size:13px}
 .paper .kw span{padding:4px 10px;border-radius:4px;background:var(--bg2);color:var(--ink2)}
 .paper pre{padding:14px 16px;border-radius:6px;background:var(--bg2);font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-x:auto}
@@ -142,6 +145,8 @@ footer small{flex-basis:100%;color:var(--faint);font-size:12.5px}
 <p class="doi">DOI: <a href="https://doi.org/10.1115/OMAE2025-156883">10.1115/OMAE2025-156883</a></p>
 <div class="ctas"><a class="btn primary" href="https://doi.org/10.1115/OMAE2025-156883" rel="noopener">Publisher version (DOI)</a><a class="btn" href="../papers/active-flow-control-strategies-drl-omae2025.pdf">PDF</a><a class="btn" href="../publications.bib">All BibTeX</a></div>
 <h2>Abstract</h2><p class="abs">We demonstrate the effectiveness of deep reinforcement learning (DRL) in active flow control around a cylinder at Re = 500. A DRL-based algorithm was employed to manipulate synthetic jets for controlling the flow field. The results show that the DRL agent achieves a 49% reduction in drag coefficient and significantly stabilizes lift coefficient fluctuations, showcasing its capability to adaptively optimize control strategies. The vorticity evolution during training reveals a progressive suppression of the Kármán vortex street, leading to a fully stabilized wake and smoother flow dynamics. Substantial improvements are observed in the streamwise and cross-stream velocity fields, with the wake transitioning from a chaotic, unsteady state to a stabilized and streamlined structure. Additionally, the pressure field evolves from an asymmetrical, fluctuating distribution to a stabilized, symmetrical profile, reducing drag and ensuring uniform pressure recovery. These findings highlight the potential of DRL-based strategies for robust and energy-efficient flow control.</p>
+<h2 id="findings">Key findings</h2><ul class="pts"><li>At Re = 500, a DRL agent controlling synthetic jets on a cylinder reduces the drag coefficient by 49% and significantly stabilizes lift-coefficient fluctuations.</li><li>The vorticity field during training shows progressive suppression of the Kármán vortex street, leading to a fully stabilized wake.</li><li>The pressure field changes from an asymmetric, fluctuating distribution to a stabilized, symmetric one.</li></ul>
+<h2 id="when-to-cite">When to cite this paper</h2><p class="lead-in">Cite this paper for:</p><ul class="pts"><li>A compact demonstration of DRL-based active flow control of a cylinder at Re = 500.</li><li>How the vorticity, velocity and pressure fields evolve while a control policy is being learned.</li></ul>
 <h2>In one paragraph</h2><p class="abs">Conference paper presented orally at ASME OMAE 2025 (Vancouver, June 2025), demonstrating DRL-based active flow control of a cylinder at Re = 500: a 49% drag reduction and a fully stabilised wake.</p>
 <h2>Keywords</h2>
 <div class="kw"><span>flow control</span><span>drag reduction</span><span>deep reinforcement learning</span></div>

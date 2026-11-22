@@ -123,13 +123,16 @@ footer .who p{margin:0;color:var(--mute)}
 footer ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 20px;align-content:flex-start}
 footer small{flex-basis:100%;color:var(--faint);font-size:12.5px}
 /* paper page */
-.paper{padding:56px 0 24px;max-width:800px}
+.paper{padding-top:56px;padding-bottom:24px;max-width:848px}
 .paper .crumb{font-size:14px;margin:0 0 24px}
 .paper h1{font-size:clamp(28px,4vw,40px);line-height:1.15;margin:0 0 16px}
 .paper .meta{font-size:16px;color:var(--ink2);margin:0 0 8px}
 .paper .doi{font-size:14px;margin:0 0 28px}
 .paper h2{font-size:20px;margin:32px 0 10px}
 .paper p.abs{font-size:16px;line-height:1.65;text-wrap:pretty}
+.paper ul.pts{margin:0;padding-left:22px;font-size:16px;line-height:1.6}
+.paper ul.pts li{margin:0 0 8px;text-wrap:pretty}
+.paper p.lead-in{margin:0 0 8px;font-size:15px;color:var(--mute)}
 .paper .kw{display:flex;flex-wrap:wrap;gap:8px;font-size:13px}
 .paper .kw span{padding:4px 10px;border-radius:4px;background:var(--bg2);color:var(--ink2)}
 .paper pre{padding:14px 16px;border-radius:6px;background:var(--bg2);font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-x:auto}
@@ -151,6 +154,8 @@ footer small{flex-basis:100%;color:var(--faint);font-size:12.5px}
 <p class="doi">DOI: <a href="https://doi.org/10.1063/5.0204237">10.1063/5.0204237</a></p>
 <div class="ctas"><a class="btn primary" href="https://doi.org/10.1063/5.0204237" rel="noopener">Publisher version (DOI)</a><a class="btn" href="https://arxiv.org/abs/2402.11515" rel="noopener">Open version (arXiv:2402.11515)</a><a class="btn" href="../papers/optimal-parallelization-strategies-drl-cfd.pdf">PDF</a><a class="btn" href="../publications.bib">All BibTeX</a></div>
 <h2>Abstract</h2><p class="abs">Deep reinforcement learning (DRL) has emerged as a promising approach for handling highly dynamic and nonlinear active flow control (AFC) problems. However, the computational cost associated with training DRL models presents a significant performance bottleneck. To address this challenge and enable efficient scaling on high-performance computing architectures, this study focuses on optimizing DRL-based algorithms in parallel settings. We validate an existing state-of-the-art DRL framework used for AFC problems and discuss its efficiency bottlenecks. Subsequently, by deconstructing the overall framework and conducting extensive scalability benchmarks for individual components, we investigate various hybrid parallelization configurations and propose efficient parallelization strategies. Moreover, we refine input/output (I/O) operations in multi-environment DRL training to tackle critical overhead associated with data movement. Finally, we demonstrate the optimized framework for a typical AFC problem where near-linear scaling can be obtained for the overall framework. We achieve a significant boost in parallel efficiency from around 49% to approximately 78%, and the training process is accelerated by approximately 47 times using 60 central processing unit (CPU) cores. These findings are expected to provide valuable insight for further advancements in DRL-based AFC studies.</p>
+<h2 id="findings">Key findings</h2><ul class="pts"><li>The computational cost of training is the bottleneck of DRL-based active flow control. The paper validates an existing state-of-the-art framework and identifies where its efficiency is lost.</li><li>Scalability benchmarks of the individual components lead to efficient hybrid parallelization strategies, and input/output operations in multi-environment training are refined to cut the overhead of data movement.</li><li>Parallel efficiency rises from about 49% to about 78%, and training is accelerated about 47 times on 60 CPU cores, with near-linear scaling of the overall framework.</li></ul>
+<h2 id="when-to-cite">When to cite this paper</h2><p class="lead-in">Cite this paper for:</p><ul class="pts"><li>Parallelization and scaling of coupled DRL–CFD training on high-performance computing systems.</li><li>The computational cost of DRL-based flow control, and how to reduce it.</li><li>I/O overhead in multi-environment reinforcement learning with CFD solvers.</li></ul>
 <h2>In one paragraph</h2><p class="abs">The engineering foundation of the thesis. Deconstructs the coupled DRL–CFD loop, benchmarks each component, and proposes a hybrid parallelisation over CFD ranks and training environments plus an optimised I/O layer: parallel efficiency 49% → 78%, 47× speed-up on 60 cores.</p>
 <h2>Keywords</h2>
 <div class="kw"><span>deep reinforcement learning</span><span>computational fluid dynamics</span><span>parallel computing</span><span>high-performance computing</span><span>scalability</span><span>active flow control</span><span>MPI</span><span>parallel efficiency</span></div>

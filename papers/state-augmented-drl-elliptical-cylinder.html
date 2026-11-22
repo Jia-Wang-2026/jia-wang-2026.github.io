@@ -122,13 +122,16 @@ footer .who p{margin:0;color:var(--mute)}
 footer ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 20px;align-content:flex-start}
 footer small{flex-basis:100%;color:var(--faint);font-size:12.5px}
 /* paper page */
-.paper{padding:56px 0 24px;max-width:800px}
+.paper{padding-top:56px;padding-bottom:24px;max-width:848px}
 .paper .crumb{font-size:14px;margin:0 0 24px}
 .paper h1{font-size:clamp(28px,4vw,40px);line-height:1.15;margin:0 0 16px}
 .paper .meta{font-size:16px;color:var(--ink2);margin:0 0 8px}
 .paper .doi{font-size:14px;margin:0 0 28px}
 .paper h2{font-size:20px;margin:32px 0 10px}
 .paper p.abs{font-size:16px;line-height:1.65;text-wrap:pretty}
+.paper ul.pts{margin:0;padding-left:22px;font-size:16px;line-height:1.6}
+.paper ul.pts li{margin:0 0 8px;text-wrap:pretty}
+.paper p.lead-in{margin:0 0 8px;font-size:15px;color:var(--mute)}
 .paper .kw{display:flex;flex-wrap:wrap;gap:8px;font-size:13px}
 .paper .kw span{padding:4px 10px;border-radius:4px;background:var(--bg2);color:var(--ink2)}
 .paper pre{padding:14px 16px;border-radius:6px;background:var(--bg2);font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-x:auto}
@@ -150,6 +153,8 @@ footer small{flex-basis:100%;color:var(--faint);font-size:12.5px}
 <p class="doi">DOI: <a href="https://doi.org/10.1016/j.ijheatfluidflow.2025.109950">10.1016/j.ijheatfluidflow.2025.109950</a></p>
 <div class="ctas"><a class="btn primary" href="https://doi.org/10.1016/j.ijheatfluidflow.2025.109950" rel="noopener">Publisher version (DOI)</a><a class="btn" href="https://arxiv.org/abs/2610.35731" rel="noopener">Open version (arXiv:2610.35731)</a><a class="btn" href="../papers/state-augmented-drl-elliptical-cylinder.pdf">PDF</a><a class="btn" href="../publications.bib">All BibTeX</a></div>
 <h2>Abstract</h2><p class="abs">We employ reinforcement learning algorithms to develop control strategies for manipulating synthetic jets on an elliptical cylinder, targeting robust flow control across varying aspect ratios (Ar). Our results show that for high aspect ratios (Ar = 1 and 0.75), the learned strategies effectively mitigate vortex shedding, achieving drag reductions of 13.4% and 20.1%, respectively. As the Ar decreases, more complex wake dynamics challenge flow control. For Ar = 0.5 and 0.25, drag reductions of 26.88% and 30.37% are achieved, though vortex suppression becomes increasingly difficult. For extremely slender cylinders (Ar = 0.1), we enhance control performance by enriching dynamic feature representation and using Kalman filtering for state estimation. Unlike conventional methods, our approach successfully achieves complete vortex shedding suppression, a maximum drag reduction of 32.2%, and eliminates periodic oscillations, stabilizing the flow. These results demonstrate the efficacy of state-enhanced RL in controlling highly slender geometries.</p>
+<h2 id="findings">Key findings</h2><ul class="pts"><li>For aspect ratios Ar = 1 and 0.75, the learned strategies mitigate vortex shedding and reduce drag by 13.4% and 20.1%.</li><li>For Ar = 0.5 and 0.25, drag is reduced by 26.88% and 30.37%, but vortex suppression becomes increasingly difficult.</li><li>For the extremely slender cylinder (Ar = 0.1), enriching the dynamic feature representation and using Kalman filtering for state estimation gives complete vortex-shedding suppression and a maximum drag reduction of 32.2%, and eliminates periodic oscillations.</li></ul>
+<h2 id="when-to-cite">When to cite this paper</h2><p class="lead-in">Cite this paper for:</p><ul class="pts"><li>State augmentation and Kalman-filter state estimation in DRL-based flow control.</li><li>Flow control of highly slender elliptical cylinders (low aspect ratio).</li><li>Drag-reduction values for elliptical cylinders across aspect ratios from Ar = 1 to 0.1.</li></ul>
 <h2>In one paragraph</h2><p class="abs">Diagnoses the failure of DRL control on very slender bodies as a state-estimation problem rather than a control-authority problem. Enriched dynamic features plus Kalman-filtered state estimation give complete vortex-shedding suppression at Ar = 0.1, where conventional methods fail.</p>
 <h2>Keywords</h2>
 <div class="kw"><span>deep reinforcement learning</span><span>active flow control</span><span>elliptical cylinder</span><span>state augmentation</span><span>Kalman filter</span><span>state estimation</span><span>slender bluff body</span><span>vortex shedding suppression</span></div>

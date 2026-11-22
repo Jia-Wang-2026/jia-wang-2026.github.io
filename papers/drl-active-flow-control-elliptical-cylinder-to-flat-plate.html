@@ -123,13 +123,16 @@ footer .who p{margin:0;color:var(--mute)}
 footer ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 20px;align-content:flex-start}
 footer small{flex-basis:100%;color:var(--faint);font-size:12.5px}
 /* paper page */
-.paper{padding:56px 0 24px;max-width:800px}
+.paper{padding-top:56px;padding-bottom:24px;max-width:848px}
 .paper .crumb{font-size:14px;margin:0 0 24px}
 .paper h1{font-size:clamp(28px,4vw,40px);line-height:1.15;margin:0 0 16px}
 .paper .meta{font-size:16px;color:var(--ink2);margin:0 0 8px}
 .paper .doi{font-size:14px;margin:0 0 28px}
 .paper h2{font-size:20px;margin:32px 0 10px}
 .paper p.abs{font-size:16px;line-height:1.65;text-wrap:pretty}
+.paper ul.pts{margin:0;padding-left:22px;font-size:16px;line-height:1.6}
+.paper ul.pts li{margin:0 0 8px;text-wrap:pretty}
+.paper p.lead-in{margin:0 0 8px;font-size:15px;color:var(--mute)}
 .paper .kw{display:flex;flex-wrap:wrap;gap:8px;font-size:13px}
 .paper .kw span{padding:4px 10px;border-radius:4px;background:var(--bg2);color:var(--ink2)}
 .paper pre{padding:14px 16px;border-radius:6px;background:var(--bg2);font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-x:auto}
@@ -151,6 +154,8 @@ footer small{flex-basis:100%;color:var(--faint);font-size:12.5px}
 <p class="doi">DOI: <a href="https://doi.org/10.1063/5.0218408">10.1063/5.0218408</a></p>
 <div class="ctas"><a class="btn primary" href="https://doi.org/10.1063/5.0218408" rel="noopener">Publisher version (DOI)</a><a class="btn" href="https://arxiv.org/abs/2404.13003" rel="noopener">Open version (arXiv:2404.13003)</a><a class="btn" href="../papers/drl-active-flow-control-elliptical-cylinder-to-flat-plate.pdf">PDF</a><a class="btn" href="../publications.bib">All BibTeX</a></div>
 <h2>Abstract</h2><p class="abs">We study the adaptability of deep reinforcement learning (DRL)-based active flow control (AFC) technology for bluff body flows with complex geometries. It is extended from a cylinder with an aspect ratio Ar = 1 to a flat elliptical cylinder with Ar = 2, slender elliptical cylinders with Ar less than 1, and a flat plate with Ar = 0. We utilize the Proximal Policy Optimization (PPO) algorithm to precisely control the mass flow rates of synthetic jets located on the upper and lower surfaces of a cylinder to achieve reduction in drag, minimization of lift, and suppression of vortex shedding. Our research findings indicate that, for elliptical cylinders with Ar between 1.75 and 0.75, the reduction in drag coefficient ranges from 0.9% to 15.7%, and the reduction in lift coefficient ranges from 95.2% to 99.7%. The DRL-based control strategy not only significantly reduces lift and drag, but also completely suppresses vortex shedding while using less than 1% of external excitation energy, demonstrating its efficiency and energy-saving capabilities. Additionally, for Ar from 0.5 to 0, the reduction in drag coefficient ranges from 26.9% to 43.6%, and the reduction in lift coefficient from 50.2% to 68.0%. This reflects the control strategy&#x27;s significant reduction in both drag and lift coefficients, while also alleviating vortex shedding. The interaction and nonlinear development of vortices in the wake of elliptical cylinders lead to complex flow instability, and DRL-based AFC technology shows adaptability and potential in addressing flow control problems for this type of bluff body flow.</p>
+<h2 id="findings">Key findings</h2><ul class="pts"><li>DRL-based active flow control with the PPO algorithm is extended from a circular cylinder (Ar = 1) to elliptical cylinders from Ar = 2 down to slender shapes with Ar below 1, and to a flat plate (Ar = 0).</li><li>For Ar between 1.75 and 0.75, the drag coefficient is reduced by 0.9% to 15.7% and the lift coefficient by 95.2% to 99.7%. Vortex shedding is completely suppressed using less than 1% of external excitation energy.</li><li>For Ar from 0.5 to 0, the drag coefficient is reduced by 26.9% to 43.6% and the lift coefficient by 50.2% to 68.0%, and vortex shedding is alleviated.</li></ul>
+<h2 id="when-to-cite">When to cite this paper</h2><p class="lead-in">Cite this paper for:</p><ul class="pts"><li>How DRL-based flow control adapts across body geometry (aspect ratio), from an elliptical cylinder to a flat plate.</li><li>Flow control of a flat plate or a slender elliptical cylinder with synthetic jets.</li><li>The Proximal Policy Optimization (PPO) algorithm applied to synthetic-jet flow control.</li></ul>
 <h2>In one paragraph</h2><p class="abs">Asks how far body geometry can be deformed before learned control breaks: a continuous sweep of aspect ratio from a flat plate to a blunt ellipse. One control mechanism is recovered across shapes; 95–99.7% lift reduction and complete shedding suppression at under 1% of free-stream energy for Ar 0.75–1.75.</p>
 <h2>Keywords</h2>
 <div class="kw"><span>deep reinforcement learning</span><span>active flow control</span><span>elliptical cylinder</span><span>flat plate</span><span>aspect ratio</span><span>geometric generalization</span><span>synthetic jets</span><span>lift reduction</span></div>

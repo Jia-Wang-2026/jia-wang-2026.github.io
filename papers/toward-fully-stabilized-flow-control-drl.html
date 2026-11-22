@@ -123,13 +123,16 @@ footer .who p{margin:0;color:var(--mute)}
 footer ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 20px;align-content:flex-start}
 footer small{flex-basis:100%;color:var(--faint);font-size:12.5px}
 /* paper page */
-.paper{padding:56px 0 24px;max-width:800px}
+.paper{padding-top:56px;padding-bottom:24px;max-width:848px}
 .paper .crumb{font-size:14px;margin:0 0 24px}
 .paper h1{font-size:clamp(28px,4vw,40px);line-height:1.15;margin:0 0 16px}
 .paper .meta{font-size:16px;color:var(--ink2);margin:0 0 8px}
 .paper .doi{font-size:14px;margin:0 0 28px}
 .paper h2{font-size:20px;margin:32px 0 10px}
 .paper p.abs{font-size:16px;line-height:1.65;text-wrap:pretty}
+.paper ul.pts{margin:0;padding-left:22px;font-size:16px;line-height:1.6}
+.paper ul.pts li{margin:0 0 8px;text-wrap:pretty}
+.paper p.lead-in{margin:0 0 8px;font-size:15px;color:var(--mute)}
 .paper .kw{display:flex;flex-wrap:wrap;gap:8px;font-size:13px}
 .paper .kw span{padding:4px 10px;border-radius:4px;background:var(--bg2);color:var(--ink2)}
 .paper pre{padding:14px 16px;border-radius:6px;background:var(--bg2);font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-x:auto}
@@ -151,6 +154,8 @@ footer small{flex-basis:100%;color:var(--faint);font-size:12.5px}
 <p class="doi">DOI: <a href="https://doi.org/10.1063/5.0272178">10.1063/5.0272178</a></p>
 <div class="ctas"><a class="btn primary" href="https://doi.org/10.1063/5.0272178" rel="noopener">Publisher version (DOI)</a><a class="btn" href="https://arxiv.org/abs/2610.35676" rel="noopener">Open version (arXiv:2610.35676)</a><a class="btn" href="../papers/toward-fully-stabilized-flow-control-drl.pdf">PDF</a><a class="btn" href="../publications.bib">All BibTeX</a></div>
 <h2>Abstract</h2><p class="abs">This study enhances the performance of flow control across various synthetic jet configurations by improving deep reinforcement learning techniques. The training results based on the foundational deep reinforcement learning framework indicate that as the Reynolds number increases, the effectiveness of synthetic jet control becomes increasingly sensitive to the position of the jet. When synthetic jets are positioned near the flow separation region, the control strategy consistently exhibits excellent performance. However, when synthetic jets are located farther from the separation region, the flow control performance diminishes, and the consumption of external energy increases. By enhancing dynamic state features and reshaping the reward function, we significantly improve control performance across various Reynolds numbers and synthetic jet positions. With the optimized framework, we achieve significant drag reduction effects ranging from 8% to 34% within the Reynolds number range of 100–400. The flow control strategy is capable of simultaneously achieving multiple control objectives, including reducing drag, suppressing lift, eliminating vortex shedding, and decreasing energy consumption. These findings highlight the potential of optimizing deep reinforcement learning frameworks to achieve more adaptive flow control strategies for various flow scenarios.</p>
+<h2 id="findings">Key findings</h2><ul class="pts"><li>With the baseline DRL framework, control becomes increasingly sensitive to jet position as the Reynolds number rises: jets near the flow-separation region perform well, while jets farther away perform worse and consume more energy.</li><li>Enhancing the dynamic state features and reshaping the reward function improves control across Reynolds numbers and jet positions.</li><li>The optimized framework achieves drag reductions of 8% to 34% for Re = 100–400.</li><li>The strategy meets several objectives at once: it reduces drag, suppresses lift, eliminates vortex shedding and decreases energy consumption.</li></ul>
+<h2 id="when-to-cite">When to cite this paper</h2><p class="lead-in">Cite this paper for:</p><ul class="pts"><li>State-feature and reward-function design for DRL-based flow control.</li><li>The sensitivity of learned flow control to synthetic-jet position, and how to reduce it.</li><li>Multi-objective flow control that includes actuation energy as an objective.</li></ul>
 <h2>In one paragraph</h2><p class="abs">Improves the learning method itself — enriched dynamic state features and a reshaped multi-objective reward — so that control stays robust at jet positions and Reynolds numbers where the baseline framework fails; 8–34% drag reduction across Re 100–400.</p>
 <h2>Keywords</h2>
 <div class="kw"><span>deep reinforcement learning</span><span>active flow control</span><span>synthetic jets</span><span>reward shaping</span><span>state representation</span><span>jet placement sensitivity</span><span>drag reduction</span><span>Reynolds number</span></div>

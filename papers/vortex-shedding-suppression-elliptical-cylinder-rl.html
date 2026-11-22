@@ -123,13 +123,16 @@ footer .who p{margin:0;color:var(--mute)}
 footer ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 20px;align-content:flex-start}
 footer small{flex-basis:100%;color:var(--faint);font-size:12.5px}
 /* paper page */
-.paper{padding:56px 0 24px;max-width:800px}
+.paper{padding-top:56px;padding-bottom:24px;max-width:848px}
 .paper .crumb{font-size:14px;margin:0 0 24px}
 .paper h1{font-size:clamp(28px,4vw,40px);line-height:1.15;margin:0 0 16px}
 .paper .meta{font-size:16px;color:var(--ink2);margin:0 0 8px}
 .paper .doi{font-size:14px;margin:0 0 28px}
 .paper h2{font-size:20px;margin:32px 0 10px}
 .paper p.abs{font-size:16px;line-height:1.65;text-wrap:pretty}
+.paper ul.pts{margin:0;padding-left:22px;font-size:16px;line-height:1.6}
+.paper ul.pts li{margin:0 0 8px;text-wrap:pretty}
+.paper p.lead-in{margin:0 0 8px;font-size:15px;color:var(--mute)}
 .paper .kw{display:flex;flex-wrap:wrap;gap:8px;font-size:13px}
 .paper .kw span{padding:4px 10px;border-radius:4px;background:var(--bg2);color:var(--ink2)}
 .paper pre{padding:14px 16px;border-radius:6px;background:var(--bg2);font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-x:auto}
@@ -151,6 +154,8 @@ footer small{flex-basis:100%;color:var(--faint);font-size:12.5px}
 <p class="doi">DOI: <a href="https://doi.org/10.1016/j.ijmecsci.2025.110517">10.1016/j.ijmecsci.2025.110517</a></p>
 <div class="ctas"><a class="btn primary" href="https://doi.org/10.1016/j.ijmecsci.2025.110517" rel="noopener">Publisher version (DOI)</a><a class="btn" href="https://arxiv.org/abs/2410.00421" rel="noopener">Open version (arXiv:2410.00421)</a><a class="btn" href="../papers/vortex-shedding-suppression-elliptical-cylinder-rl.pdf">PDF</a><a class="btn" href="../publications.bib">All BibTeX</a></div>
 <h2>Abstract</h2><p class="abs">Flow control of bluff bodies plays a critical role in engineering applications. In this study, deep reinforcement learning (DRL) is employed to develop flow control strategies for the flow past an elliptical cylinder confined between two walls. The primary objective is to investigate the feasibility of achieving multi-objective flow control for an elliptical cylinder with varying aspect ratios (Ar), while maintaining low control energy input. DRL training results demonstrate that for an elliptical cylinder with larger Ar, the control strategy effectively reduces drag, minimizes lift fluctuations, and completely suppresses vortex shedding, all while maintaining low external energy consumption. Conversely, decreasing the Ar compromises the effectiveness of multi-objective control, even when greater energy input is applied. Through detailed physical analysis, the coupling effect between the blockage ratio (β) and Ar is identified as a limiting factor for vortex shedding suppression and wake stabilization. At lower values of β, the control strategy successfully achieves multi-objective optimization for elliptical cylinders across the entire range of Ar. Although balancing energy efficiency and control performance remains challenging for highly slender cylinders, the proposed DRL strategy still achieves effective vortex shedding suppression. This work highlights the potential of DRL-based control strategies to effectively stabilize wake flows around slender bluff bodies, with an explicit emphasis on maintaining energy efficiency.</p>
+<h2 id="findings">Key findings</h2><ul class="pts"><li>For elliptical cylinders with larger aspect ratio (Ar), confined between two walls, the learned strategy reduces drag, minimizes lift fluctuations and completely suppresses vortex shedding while keeping external energy consumption low.</li><li>As Ar decreases, multi-objective control becomes less effective, even when more energy is applied.</li><li>The coupling between blockage ratio (β) and Ar is identified as the factor that limits vortex-shedding suppression and wake stabilization.</li><li>At lower β, multi-objective control is achieved across the entire range of Ar. For highly slender cylinders, vortex shedding is still suppressed, although balancing energy efficiency against control performance remains difficult.</li></ul>
+<h2 id="when-to-cite">When to cite this paper</h2><p class="lead-in">Cite this paper for:</p><ul class="pts"><li>The effect of blockage ratio (wall confinement) on DRL-based flow control of bluff bodies.</li><li>Vortex-shedding suppression and wake stabilization on slender elliptical cylinders.</li><li>Multi-objective flow control with DRL (drag, lift fluctuation and vortex shedding) at low actuation energy.</li></ul>
 <h2>In one paragraph</h2><p class="abs">Isolates the coupling between blockage ratio and aspect ratio as the physical mechanism limiting learned wake stabilisation on slender bluff bodies; at lower blockage, full multi-objective control is recovered across the entire aspect-ratio range.</p>
 <h2>Keywords</h2>
 <div class="kw"><span>deep reinforcement learning</span><span>active flow control</span><span>elliptical cylinder</span><span>vortex shedding suppression</span><span>blockage ratio</span><span>aspect ratio</span><span>synthetic jets</span><span>wake stabilization</span><span>energy efficiency</span></div>

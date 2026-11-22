@@ -123,13 +123,16 @@ footer .who p{margin:0;color:var(--mute)}
 footer ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 20px;align-content:flex-start}
 footer small{flex-basis:100%;color:var(--faint);font-size:12.5px}
 /* paper page */
-.paper{padding:56px 0 24px;max-width:800px}
+.paper{padding-top:56px;padding-bottom:24px;max-width:848px}
 .paper .crumb{font-size:14px;margin:0 0 24px}
 .paper h1{font-size:clamp(28px,4vw,40px);line-height:1.15;margin:0 0 16px}
 .paper .meta{font-size:16px;color:var(--ink2);margin:0 0 8px}
 .paper .doi{font-size:14px;margin:0 0 28px}
 .paper h2{font-size:20px;margin:32px 0 10px}
 .paper p.abs{font-size:16px;line-height:1.65;text-wrap:pretty}
+.paper ul.pts{margin:0;padding-left:22px;font-size:16px;line-height:1.6}
+.paper ul.pts li{margin:0 0 8px;text-wrap:pretty}
+.paper p.lead-in{margin:0 0 8px;font-size:15px;color:var(--mute)}
 .paper .kw{display:flex;flex-wrap:wrap;gap:8px;font-size:13px}
 .paper .kw span{padding:4px 10px;border-radius:4px;background:var(--bg2);color:var(--ink2)}
 .paper pre{padding:14px 16px;border-radius:6px;background:var(--bg2);font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-x:auto}
@@ -151,6 +154,8 @@ footer small{flex-basis:100%;color:var(--faint);font-size:12.5px}
 <p class="doi">DOI: <a href="https://doi.org/10.1063/5.0207879">10.1063/5.0207879</a></p>
 <div class="ctas"><a class="btn primary" href="https://doi.org/10.1063/5.0207879" rel="noopener">Publisher version (DOI)</a><a class="btn" href="https://arxiv.org/abs/2404.12123" rel="noopener">Open version (arXiv:2404.12123)</a><a class="btn" href="../papers/robust-adaptive-drl-square-cylinder-varying-reynolds.pdf">PDF</a><a class="btn" href="../publications.bib">All BibTeX</a></div>
 <h2>Abstract</h2><p class="abs">The present study applies a Deep Reinforcement Learning (DRL) algorithm to Active Flow Control (AFC) of a two-dimensional flow around a confined square cylinder. Specifically, the Soft Actor-Critic (SAC) algorithm is employed to modulate the flow of a pair of synthetic jets placed on the upper and lower surfaces of the confined squared cylinder in flow configurations characterized by Re of 100, 200, 300, and 400. The investigation starts with an analysis of the baseline flow in the absence of active control. It is observed that at Re = 100 and Re = 200, the vortex shedding exhibits mono-frequency characteristics. Conversely, at Re = 300 and Re = 400, the vortex shedding is dominated by multiple frequencies, which is indicative of more complex flow features. With the application of the SAC algorithm, we demonstrate the capability of DRL-based control in effectively suppressing vortex shedding, while significantly diminishing drag and fluctuations in lift. Quantitatively, the data-driven active control strategy results in a drag reduction of approximately 14.4%, 26.4%, 38.9%, and 47.0% for Re = 100, 200, 300, and 400, respectively. To understand the underlying control mechanism, we also present detailed flow field comparisons, which showcase the adaptability of DRL in devising distinct control strategies tailored to the dynamic conditions at varying Re. These findings substantiate the ability of DRL to control chaotic, multi-frequency dominated vortex shedding phenomena, underscoring the robustness of DRL in complex AFC problems.</p>
+<h2 id="findings">Key findings</h2><ul class="pts"><li>The Soft Actor-Critic (SAC) algorithm controls a pair of synthetic jets on a confined square cylinder at Re = 100, 200, 300 and 400.</li><li>Without control, vortex shedding has a single frequency at Re = 100 and 200 and is dominated by multiple frequencies at Re = 300 and 400.</li><li>Drag is reduced by about 14.4%, 26.4%, 38.9% and 47.0% at Re = 100, 200, 300 and 400.</li><li>The agent devises distinct control strategies for different Reynolds numbers, and controls chaotic, multi-frequency vortex shedding.</li></ul>
+<h2 id="when-to-cite">When to cite this paper</h2><p class="lead-in">Cite this paper for:</p><ul class="pts"><li>The robustness of DRL-based flow control across Reynolds numbers.</li><li>Control of multi-frequency (chaotic) vortex shedding behind a square cylinder.</li><li>The Soft Actor-Critic (SAC) algorithm applied to active flow control.</li></ul>
 <h2>In one paragraph</h2><p class="abs">Builds the coupled DRL–CFD framework on which the later studies rest, and tests it where the single-frequency argument breaks: multi-frequency, chaotic wakes at Re 300–400. The agent learns qualitatively different strategies at different Re, with drag reduction rising from 14.4% to 47.0%.</p>
 <h2>Keywords</h2>
 <div class="kw"><span>deep reinforcement learning</span><span>active flow control</span><span>square cylinder</span><span>Soft Actor-Critic</span><span>multi-frequency vortex shedding</span><span>Reynolds number</span><span>robustness</span><span>drag reduction</span></div>

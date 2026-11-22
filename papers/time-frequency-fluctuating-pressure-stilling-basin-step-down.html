@@ -120,13 +120,16 @@ footer .who p{margin:0;color:var(--mute)}
 footer ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 20px;align-content:flex-start}
 footer small{flex-basis:100%;color:var(--faint);font-size:12.5px}
 /* paper page */
-.paper{padding:56px 0 24px;max-width:800px}
+.paper{padding-top:56px;padding-bottom:24px;max-width:848px}
 .paper .crumb{font-size:14px;margin:0 0 24px}
 .paper h1{font-size:clamp(28px,4vw,40px);line-height:1.15;margin:0 0 16px}
 .paper .meta{font-size:16px;color:var(--ink2);margin:0 0 8px}
 .paper .doi{font-size:14px;margin:0 0 28px}
 .paper h2{font-size:20px;margin:32px 0 10px}
 .paper p.abs{font-size:16px;line-height:1.65;text-wrap:pretty}
+.paper ul.pts{margin:0;padding-left:22px;font-size:16px;line-height:1.6}
+.paper ul.pts li{margin:0 0 8px;text-wrap:pretty}
+.paper p.lead-in{margin:0 0 8px;font-size:15px;color:var(--mute)}
 .paper .kw{display:flex;flex-wrap:wrap;gap:8px;font-size:13px}
 .paper .kw span{padding:4px 10px;border-radius:4px;background:var(--bg2);color:var(--ink2)}
 .paper pre{padding:14px 16px;border-radius:6px;background:var(--bg2);font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-x:auto}
@@ -148,6 +151,8 @@ footer small{flex-basis:100%;color:var(--faint);font-size:12.5px}
 <p class="doi">DOI: <a href="https://doi.org/10.1155/2021/7246488">10.1155/2021/7246488</a></p>
 <div class="ctas"><a class="btn primary" href="https://doi.org/10.1155/2021/7246488" rel="noopener">Publisher version (DOI)</a><a class="btn" href="../papers/time-frequency-fluctuating-pressure-stilling-basin-step-down.pdf">PDF</a><a class="btn" href="../publications.bib">All BibTeX</a></div>
 <h2>Abstract</h2><p class="abs">Fluctuating pressure is an important feature of the bottom of a stilling basin with step-down floor. To analyze the frequency domain characteristics and energy distribution of this fluctuating pressure, the Hilbert–Huang transform (HHT) method is used. First, empirical mode decomposition is performed on the pressure fluctuation signal to obtain a number of intrinsic mode functions (IMFs), and then the Hilbert transformation is performed on each IMF to obtain the Hilbert spectrum and marginal spectrum for characterizing the pressure fluctuation signal. The results show that the fluctuating pressure signal of the stilling basin with step-down floor has obvious characteristics of low frequency and large amplitude. The dominant frequencies of the head and tail of the stilling basin are very prominent, and most of the energy is concentrated below 5.0 Hz; with the increase in the relative position of the measuring point, the energy distribution in stilling basin with step-down floor changes from high-frequency component to low-frequency component. The fluctuating pressure signal of the stilling basin with step-down floor has random amplitude modulation and frequency modulation. The marginal spectrum obtained by the HHT method can obtain the local characteristics of the signal more accurately and is more suitable for processing nonlinear and nonstationary signals.</p>
+<h2 id="findings">Key findings</h2><ul class="pts"><li>The fluctuating pressure signal on the floor of a stilling basin with a step-down floor has low-frequency, large-amplitude characteristics.</li><li>The dominant frequencies at the head and tail of the basin are prominent, and most of the energy is concentrated below 5.0 Hz.</li><li>As the relative position of the measuring point increases, the energy distribution shifts from high-frequency to low-frequency components.</li><li>The marginal spectrum from the Hilbert–Huang transform captures the local characteristics of the signal more accurately and suits nonlinear, nonstationary signals.</li></ul>
+<h2 id="when-to-cite">When to cite this paper</h2><p class="lead-in">Cite this paper for:</p><ul class="pts"><li>Time–frequency characteristics of fluctuating pressure on the floor of a stilling basin with a step-down floor.</li><li>The Hilbert–Huang transform (EMD and Hilbert spectrum) for nonlinear, nonstationary pressure signals.</li></ul>
 <h2>In one paragraph</h2><p class="abs">Time–frequency characteristics of bottom pressure fluctuations in a stilling basin with a step-down floor, analysed with the Hilbert–Huang transform.</p>
 <h2>Keywords</h2>
 <div class="kw"><span>stilling basin</span><span>step-down floor</span><span>fluctuating pressure</span><span>Hilbert–Huang transform</span><span>time-frequency analysis</span></div>

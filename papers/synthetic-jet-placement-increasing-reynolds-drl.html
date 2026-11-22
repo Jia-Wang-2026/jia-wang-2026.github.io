@@ -122,13 +122,16 @@ footer .who p{margin:0;color:var(--mute)}
 footer ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 20px;align-content:flex-start}
 footer small{flex-basis:100%;color:var(--faint);font-size:12.5px}
 /* paper page */
-.paper{padding:56px 0 24px;max-width:800px}
+.paper{padding-top:56px;padding-bottom:24px;max-width:848px}
 .paper .crumb{font-size:14px;margin:0 0 24px}
 .paper h1{font-size:clamp(28px,4vw,40px);line-height:1.15;margin:0 0 16px}
 .paper .meta{font-size:16px;color:var(--ink2);margin:0 0 8px}
 .paper .doi{font-size:14px;margin:0 0 28px}
 .paper h2{font-size:20px;margin:32px 0 10px}
 .paper p.abs{font-size:16px;line-height:1.65;text-wrap:pretty}
+.paper ul.pts{margin:0;padding-left:22px;font-size:16px;line-height:1.6}
+.paper ul.pts li{margin:0 0 8px;text-wrap:pretty}
+.paper p.lead-in{margin:0 0 8px;font-size:15px;color:var(--mute)}
 .paper .kw{display:flex;flex-wrap:wrap;gap:8px;font-size:13px}
 .paper .kw span{padding:4px 10px;border-radius:4px;background:var(--bg2);color:var(--ink2)}
 .paper pre{padding:14px 16px;border-radius:6px;background:var(--bg2);font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-x:auto}
@@ -150,6 +153,8 @@ footer small{flex-basis:100%;color:var(--faint);font-size:12.5px}
 <p class="doi">DOI: <a href="https://doi.org/10.1016/j.icheatmasstransfer.2025.109203">10.1016/j.icheatmasstransfer.2025.109203</a></p>
 <div class="ctas"><a class="btn primary" href="https://doi.org/10.1016/j.icheatmasstransfer.2025.109203" rel="noopener">Publisher version (DOI)</a><a class="btn" href="https://arxiv.org/abs/2611.01462" rel="noopener">Open version (arXiv:2611.01462)</a><a class="btn" href="../papers/synthetic-jet-placement-increasing-reynolds-drl.pdf">PDF</a><a class="btn" href="../publications.bib">All BibTeX</a></div>
 <h2>Abstract</h2><p class="abs">This study utilizes reinforcement learning algorithms to develop advanced control strategies for manipulating synthetic jets positioned on a cylinder, aiming to achieve effective flow control. It addresses critical challenges in achieving robust performance across moderate to high Reynolds numbers (Re) and varying jet placement configurations. The results demonstrate that placing synthetic jets near flow separation regions yields optimal control performance. At Re = 500, the multi-objective flow control strategy achieves up to 37.4% drag reduction and 99% suppression of lift oscillations, while completely suppressing vortex shedding. At Re = 1000, drag reduction improves to 49.1%, with equally effective lift suppression and complete vortex shedding suppression. At Re = 2000, the strategy achieves a maximum drag reduction of 58.8% and suppresses 90% of lift oscillations, although some residual wake instabilities persist. Additionally, synthetic jets effectively disrupted detached vortices and stabilized the wake, resulting in streamlined flow and suppressed vortex shedding. These findings underscore the pivotal influence of jet placement in optimizing flow control efficacy, while affirming the advanced capability of control strategies to tackle intricate challenges.</p>
+<h2 id="findings">Key findings</h2><ul class="pts"><li>Placing the synthetic jets near the flow-separation region of the cylinder gives the best control performance.</li><li>At Re = 500: up to 37.4% drag reduction, 99% suppression of lift oscillations and complete suppression of vortex shedding.</li><li>At Re = 1000: 49.1% drag reduction, with equally effective lift suppression and complete suppression of vortex shedding.</li><li>At Re = 2000: a maximum drag reduction of 58.8% and 90% suppression of lift oscillations, with some residual wake instability.</li></ul>
+<h2 id="when-to-cite">When to cite this paper</h2><p class="lead-in">Cite this paper for:</p><ul class="pts"><li>DRL-based active flow control at moderate to high Reynolds numbers (Re = 500 to 2000).</li><li>The influence of synthetic-jet placement, relative to the flow-separation region, on control performance.</li><li>Reference drag-reduction values for a jet-controlled cylinder at Re = 500, 1000 and 2000.</li></ul>
 <h2>In one paragraph</h2><p class="abs">Pushes learned control to Re 500–2000. Complete vortex-shedding suppression up to Re 1000 and 58.8% drag reduction at Re 2000; the penalty for misplacing the jet grows with Reynolds number until placement becomes a feasibility constraint rather than a tuning choice.</p>
 <h2>Keywords</h2>
 <div class="kw"><span>deep reinforcement learning</span><span>active flow control</span><span>synthetic jets</span><span>jet placement</span><span>high Reynolds number</span><span>drag reduction</span><span>vortex shedding suppression</span><span>control stability</span></div>
