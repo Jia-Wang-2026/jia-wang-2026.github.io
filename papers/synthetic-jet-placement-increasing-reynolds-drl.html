@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Optimizing synthetic jet placement for control stability in increasing Reynolds number flows based on deep reinforcement learning — Wang Jia</title>
+<meta name="description" content="This study utilizes reinforcement learning algorithms to develop advanced control strategies for manipulating synthetic jets positioned on a cylinder, aiming to achieve effective flow control. It addresses critical challenges in achieving robust performance across moderate to hig…">
+<meta name="author" content="Jia, W., &amp; Xu, H.">
+<link rel="canonical" href="https://jia-wang-2026.github.io/papers/synthetic-jet-placement-increasing-reynolds-drl.html">
+<meta name="robots" content="index, follow, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Optimizing synthetic jet placement for control stability in increasing Reynolds number flows based on deep reinforcement learning">
+<meta property="og:description" content="This study utilizes reinforcement learning algorithms to develop advanced control strategies for manipulating synthetic jets positioned on a cylinder, aiming to achieve effective flow control. It addresses critical challenges in achieving robust performance across moderate to hig…">
+<meta property="og:url" content="https://jia-wang-2026.github.io/papers/synthetic-jet-placement-increasing-reynolds-drl.html">
+<meta name="citation_title" content="Optimizing synthetic jet placement for control stability in increasing Reynolds number flows based on deep reinforcement learning">
+<meta name="citation_author" content="Jia, Wang">
+<meta name="citation_author" content="Xu, Hang">
+<meta name="citation_publication_date" content="2025">
+<meta name="citation_journal_title" content="International Communications in Heat and Mass Transfer">
+<meta name="citation_issn" content="0735-1933">
+<meta name="citation_volume" content="166">
+<meta name="citation_firstpage" content="109203">
+<meta name="citation_doi" content="10.1016/j.icheatmasstransfer.2025.109203">
+<meta name="citation_publisher" content="Elsevier">
+<meta name="citation_pdf_url" content="https://jia-wang-2026.github.io/papers/synthetic-jet-placement-increasing-reynolds-drl.pdf">
+<meta name="citation_arxiv_id" content="2611.01462">
+<meta name="citation_abstract" content="This study utilizes reinforcement learning algorithms to develop advanced control strategies for manipulating synthetic jets positioned on a cylinder, aiming to achieve effective flow control. It addresses critical challenges in achieving robust performance across moderate to high Reynolds numbers (Re) and varying jet placement configurations. The results demonstrate that placing synthetic jets near flow separation regions yields optimal control performance. At Re = 500, the multi-objective flow control strategy achieves up to 37.4% drag reduction and 99% suppression of lift oscillations, while completely suppressing vortex shedding. At Re = 1000, drag reduction improves to 49.1%, with equally effective lift suppression and complete vortex shedding suppression. At Re = 2000, the strategy achieves a maximum drag reduction of 58.8% and suppresses 90% of lift oscillations, although some residual wake instabilities persist. Additionally, synthetic jets effectively disrupted detached vortices and stabilized the wake, resulting in streamlined flow and suppressed vortex shedding. These findings underscore the pivotal influence of jet placement in optimizing flow control efficacy, while affirming the advanced capability of control strategies to tackle intricate challenges.">
+<meta name="citation_keywords" content="deep reinforcement learning">
+<meta name="citation_keywords" content="active flow control">
+<meta name="citation_keywords" content="synthetic jets">
+<meta name="citation_keywords" content="jet placement">
+<meta name="citation_keywords" content="high Reynolds number">
+<meta name="citation_keywords" content="drag reduction">
+<meta name="citation_keywords" content="vortex shedding suppression">
+<meta name="citation_keywords" content="control stability">
+<meta name="dc.title" content="Optimizing synthetic jet placement for control stability in increasing Reynolds number flows based on deep reinforcement learning">
+<meta name="dc.creator" content="Jia, W., &amp; Xu, H.">
+<meta name="dc.identifier" content="doi:10.1016/j.icheatmasstransfer.2025.109203">
+<meta name="dc.date" content="2025">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FBFAF7;--bg2:#F4F1EA;--ink:#1B1C1E;--ink2:#3A3C40;--mute:#5B5E64;--faint:#8A8D93;--line:#E6E2DA;--acc:#1D4F8C;--acc2:#133561;--accbg:#EEF3F9;--card:#FFFFFF}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141516;--bg2:#1C1D1F;--ink:#ECEAE4;--ink2:#C9C6BE;--mute:#A3A09A;--faint:#7E7C77;--line:#2E2F32;--acc:#8FB4E6;--acc2:#B7D0F2;--accbg:#1E2A3B;--card:#1A1B1D}}
+:root[data-theme="dark"]{--bg:#141516;--bg2:#1C1D1F;--ink:#ECEAE4;--ink2:#C9C6BE;--mute:#A3A09A;--faint:#7E7C77;--line:#2E2F32;--acc:#8FB4E6;--acc2:#B7D0F2;--accbg:#1E2A3B;--card:#1A1B1D}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--acc)}a:hover{color:var(--acc2)}
+h1,h2,h3,.serif{font-family:"Source Serif 4",Georgia,"Times New Roman",serif;font-weight:600;letter-spacing:-0.005em}
+.wrap{max-width:1120px;margin:0 auto;padding-left:24px;padding-right:24px}
+nav.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 24px;padding-top:12px;padding-bottom:12px}
+nav.top .brand{font-family:"Source Serif 4",Georgia,serif;font-size:20px;font-weight:600;color:var(--ink);text-decoration:none}
+nav.top ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:4px 20px;font-size:14px;font-weight:500}
+nav.top ul a{color:var(--ink2);text-decoration:none;padding:6px 0;display:inline-block}
+nav.top ul a:hover{color:var(--acc)}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:6px;border:1px solid var(--line);color:var(--ink);text-decoration:none;font-weight:500;font-size:14px;background:var(--card)}
+.btn:hover{border-color:var(--faint);color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn.primary:hover{color:var(--bg);opacity:.9}
+.hero{padding-top:72px;padding-bottom:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr));gap:48px;align-items:center}
+.hero .eyebrow{margin:0 0 20px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);font-weight:600}
+.hero h1{margin:0 0 20px;font-size:clamp(40px,6vw,56px);line-height:1.05}
+.hero .tag{margin:0 0 16px;font-family:"Source Serif 4",Georgia,serif;font-size:clamp(20px,2.2vw,24px);line-height:1.35;color:var(--ink2);text-wrap:pretty}
+.hero .alias{margin:0 0 22px;font-size:15px;color:var(--mute)}
+.hero .links{display:flex;flex-wrap:wrap;gap:10px}
+.hero figure{margin:0;display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.hero .portrait{width:220px;height:220px;object-fit:cover;border-radius:8px;border:1px solid var(--line)}
+.hero .flow{width:100%;max-width:520px;height:auto;border-radius:8px;border:1px solid var(--line)}
+.hero figcaption{font-size:13px;color:var(--mute);max-width:520px}
+.band{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
+.band .wrap{padding-top:40px;padding-bottom:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:32px 48px}
+.band p.lead{margin:0;font-size:17px;line-height:1.6;text-wrap:pretty;grid-column:1/-1}
+@media(min-width:960px){.band p.lead{grid-column:span 2}}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.stats b{display:block;font-family:"Source Serif 4",Georgia,serif;font-size:36px;font-weight:600;line-height:1}
+.stats span{display:block;margin-top:4px;font-size:13px;color:var(--mute)}
+section.sec{padding:64px 0 16px}
+section.sec>.wrap>h2{margin:0 0 12px;font-size:clamp(28px,3.4vw,36px);line-height:1.15}
+.intro{margin:0 0 36px;max-width:760px;font-size:17px;color:var(--ink2);text-wrap:pretty}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(480px,100%),1fr));gap:28px}
+.card{display:flex;flex-direction:column;gap:12px;align-self:start;padding:22px;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+.card img{width:100%;height:auto;border-radius:6px;border:1px solid var(--line)}
+.card .kicker{margin:0;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);font-weight:600}
+.card h3{margin:0;font-size:22px;line-height:1.2}
+.card p{margin:0;font-size:15px;color:var(--ink2)}
+.pubhead{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px;margin-bottom:24px}
+.pubhead p{margin:6px 0 0;font-size:15px;color:var(--mute)}
+.pubhead .dl{display:flex;flex-wrap:wrap;gap:10px}
+h3.group{margin:28px 0 0;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);font-weight:600;font-family:Inter,system-ui,sans-serif}
+ol.pubs{list-style:none;margin:12px 0 0;padding:0;border-top:1px solid var(--line)}
+ol.pubs li{display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+ol.pubs .yr{font-family:"Source Serif 4",Georgia,serif;font-size:15px;color:var(--faint);padding-top:3px}
+ol.pubs .ttl{font-family:"Source Serif 4",Georgia,serif;font-size:19px;font-weight:600;line-height:1.3;color:var(--ink);text-decoration:none}
+ol.pubs .ttl:hover{color:var(--acc)}
+ol.pubs .cite{margin:6px 0 0;font-size:14px;color:var(--ink2)}
+ol.pubs .cite .flag{color:var(--acc);font-weight:500}
+ol.pubs .hl{margin:6px 0 0;font-size:14px;color:var(--mute)}
+ol.pubs .acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;font-size:12.5px}
+ol.pubs .acts a,ol.pubs .acts summary{display:inline-flex;align-items:center;min-height:30px;padding:0 10px;border-radius:4px;background:var(--bg2);color:var(--ink2);text-decoration:none;cursor:pointer;list-style:none;border:1px solid transparent}
+ol.pubs .acts summary::-webkit-details-marker{display:none}
+ol.pubs .acts a:hover,ol.pubs .acts summary:hover{border-color:var(--faint)}
+ol.pubs .acts details{display:contents}
+ol.pubs .acts details[open]>summary{background:var(--accbg);color:var(--acc)}
+ol.pubs .acts details>div{flex-basis:100%;width:100%;order:9;margin-top:4px}
+ol.pubs .abs{margin:0;padding:14px 16px;border-radius:6px;background:var(--bg2);font-size:14.5px;line-height:1.6;color:var(--ink2);text-wrap:pretty}
+ol.pubs pre{margin:0;padding:14px 16px;border-radius:6px;background:var(--bg2);font:12.5px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-x:auto;color:var(--ink2)}
+ol.pubs.compact li{padding:14px 0}
+ol.pubs.compact .cite{margin:0;font-size:14px}
+.two{display:flex;flex-direction:column;gap:56px}
+.two h2{margin:0 0 16px;font-size:28px}
+.soft{display:flex;flex-direction:column;gap:6px;padding:18px;border:1px solid var(--line);border-radius:10px;background:var(--card);margin-bottom:14px}
+.soft a{font-weight:600;text-decoration:none}
+.soft p{margin:0;font-size:14px;color:var(--ink2)}
+dl.bg{margin:0 0 20px;display:grid;grid-template-columns:110px minmax(0,1fr);gap:10px 16px;font-size:14px}
+dl.bg dt{color:var(--faint)}dl.bg dd{margin:0}
+footer{margin-top:56px;border-top:1px solid var(--line);background:var(--bg2)}
+footer .wrap{padding-top:40px;padding-bottom:40px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 32px;font-size:14px;color:var(--ink2)}
+footer .who{display:flex;flex-direction:column;gap:6px;max-width:560px}
+footer .who b{font-family:"Source Serif 4",Georgia,serif;font-size:18px;font-weight:600;color:var(--ink)}
+footer .who p{margin:0;color:var(--mute)}
+footer ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 20px;align-content:flex-start}
+footer small{flex-basis:100%;color:var(--faint);font-size:12.5px}
+/* paper page */
+.paper{padding:56px 0 24px;max-width:800px}
+.paper .crumb{font-size:14px;margin:0 0 24px}
+.paper h1{font-size:clamp(28px,4vw,40px);line-height:1.15;margin:0 0 16px}
+.paper .meta{font-size:16px;color:var(--ink2);margin:0 0 8px}
+.paper .doi{font-size:14px;margin:0 0 28px}
+.paper h2{font-size:20px;margin:32px 0 10px}
+.paper p.abs{font-size:16px;line-height:1.65;text-wrap:pretty}
+.paper .kw{display:flex;flex-wrap:wrap;gap:8px;font-size:13px}
+.paper .kw span{padding:4px 10px;border-radius:4px;background:var(--bg2);color:var(--ink2)}
+.paper pre{padding:14px 16px;border-radius:6px;background:var(--bg2);font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-x:auto}
+.paper .ctas{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}
+.paper .cite-box{padding:14px 16px;border-radius:6px;background:var(--bg2);font-size:14.5px;line-height:1.6}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ScholarlyArticle", "@id": "https://doi.org/10.1016/j.icheatmasstransfer.2025.109203", "url": "https://jia-wang-2026.github.io/papers/synthetic-jet-placement-increasing-reynolds-drl.html", "headline": "Optimizing synthetic jet placement for control stability in increasing Reynolds number flows based on deep reinforcement learning", "name": "Optimizing synthetic jet placement for control stability in increasing Reynolds number flows based on deep reinforcement learning", "datePublished": "2025", "inLanguage": "en", "author": [{"@type": "Person", "name": "Wang Jia", "givenName": "Wang", "familyName": "Jia", "alternateName": ["Jia, W.", "贾旺"], "@id": "https://orcid.org/0009-0008-2786-397X", "sameAs": ["https://orcid.org/0009-0008-2786-397X", "https://scholar.google.com/citations?user=TPi-OOoAAAAJ", "https://www.researchgate.net/profile/Wang-Jia-67"]}, {"@type": "Person", "name": "Hang Xu", "givenName": "Hang", "familyName": "Xu"}], "keywords": "deep reinforcement learning, active flow control, synthetic jets, jet placement, high Reynolds number, drag reduction, vortex shedding suppression, control stability", "abstract": "This study utilizes reinforcement learning algorithms to develop advanced control strategies for manipulating synthetic jets positioned on a cylinder, aiming to achieve effective flow control. It addresses critical challenges in achieving robust performance across moderate to high Reynolds numbers (Re) and varying jet placement configurations. The results demonstrate that placing synthetic jets near flow separation regions yields optimal control performance. At Re = 500, the multi-objective flow control strategy achieves up to 37.4% drag reduction and 99% suppression of lift oscillations, while completely suppressing vortex shedding. At Re = 1000, drag reduction improves to 49.1%, with equally effective lift suppression and complete vortex shedding suppression. At Re = 2000, the strategy achieves a maximum drag reduction of 58.8% and suppresses 90% of lift oscillations, although some residual wake instabilities persist. Additionally, synthetic jets effectively disrupted detached vortices and stabilized the wake, resulting in streamlined flow and suppressed vortex shedding. These findings underscore the pivotal influence of jet placement in optimizing flow control efficacy, while affirming the advanced capability of control strategies to tackle intricate challenges.", "sameAs": ["https://doi.org/10.1016/j.icheatmasstransfer.2025.109203", "https://arxiv.org/abs/2611.01462"], "identifier": {"@type": "PropertyValue", "propertyID": "DOI", "value": "10.1016/j.icheatmasstransfer.2025.109203"}, "isPartOf": {"@type": "PublicationVolume", "volumeNumber": "166", "isPartOf": {"@type": "Periodical", "name": "International Communications in Heat and Mass Transfer", "issn": "0735-1933"}}, "pageStart": "109203", "publisher": {"@type": "Organization", "name": "Elsevier"}}</script>
+</head>
+<body>
+<nav class="top" aria-label="Primary"><div class="wrap">
+<a class="brand" href="../index.html">Wang Jia</a>
+<ul><li><a href="../index.html#research">Research</a></li><li><a href="../index.html#publications">Publications</a></li><li><a href="../index.html#earlier">Master's research</a></li><li><a href="../index.html#cv">Background</a></li><li><a href="../index.html#contact">Contact</a></li></ul>
+</div></nav>
+<main class="wrap paper">
+<p class="crumb"><a href="../index.html">Wang Jia</a> › <a href="../index.html#publications">Publications</a> › 2025</p>
+<h1>Optimizing synthetic jet placement for control stability in increasing Reynolds number flows based on deep reinforcement learning</h1>
+
+<p class="meta"><strong>Jia, W.</strong>, &amp; Xu, H. (2025). <em>International Communications in Heat and Mass Transfer</em>, 166, 109203.</p>
+<p class="doi">DOI: <a href="https://doi.org/10.1016/j.icheatmasstransfer.2025.109203">10.1016/j.icheatmasstransfer.2025.109203</a></p>
+<div class="ctas"><a class="btn primary" href="https://doi.org/10.1016/j.icheatmasstransfer.2025.109203" rel="noopener">Publisher version (DOI)</a><a class="btn" href="https://arxiv.org/abs/2611.01462" rel="noopener">Open version (arXiv:2611.01462)</a><a class="btn" href="../papers/synthetic-jet-placement-increasing-reynolds-drl.pdf">PDF</a><a class="btn" href="../publications.bib">All BibTeX</a></div>
+<h2>Abstract</h2><p class="abs">This study utilizes reinforcement learning algorithms to develop advanced control strategies for manipulating synthetic jets positioned on a cylinder, aiming to achieve effective flow control. It addresses critical challenges in achieving robust performance across moderate to high Reynolds numbers (Re) and varying jet placement configurations. The results demonstrate that placing synthetic jets near flow separation regions yields optimal control performance. At Re = 500, the multi-objective flow control strategy achieves up to 37.4% drag reduction and 99% suppression of lift oscillations, while completely suppressing vortex shedding. At Re = 1000, drag reduction improves to 49.1%, with equally effective lift suppression and complete vortex shedding suppression. At Re = 2000, the strategy achieves a maximum drag reduction of 58.8% and suppresses 90% of lift oscillations, although some residual wake instabilities persist. Additionally, synthetic jets effectively disrupted detached vortices and stabilized the wake, resulting in streamlined flow and suppressed vortex shedding. These findings underscore the pivotal influence of jet placement in optimizing flow control efficacy, while affirming the advanced capability of control strategies to tackle intricate challenges.</p>
+<h2>In one paragraph</h2><p class="abs">Pushes learned control to Re 500–2000. Complete vortex-shedding suppression up to Re 1000 and 58.8% drag reduction at Re 2000; the penalty for misplacing the jet grows with Reynolds number until placement becomes a feasibility constraint rather than a tuning choice.</p>
+<h2>Keywords</h2>
+<div class="kw"><span>deep reinforcement learning</span><span>active flow control</span><span>synthetic jets</span><span>jet placement</span><span>high Reynolds number</span><span>drag reduction</span><span>vortex shedding suppression</span><span>control stability</span></div>
+<h2>Cite this paper</h2>
+<p class="cite-box">Jia, W., &amp; Xu, H. (2025). Optimizing synthetic jet placement for control stability in increasing Reynolds number flows based on deep reinforcement learning. International Communications in Heat and Mass Transfer, 166, 109203. https://doi.org/10.1016/j.icheatmasstransfer.2025.109203</p>
+<h2 id="bibtex">BibTeX</h2>
+<pre>@article{jia2025placement,
+  author    = {Jia, Wang and Xu, Hang},
+  title     = {Optimizing synthetic jet placement for control stability in increasing Reynolds number flows based on deep reinforcement learning},
+  journal   = {International Communications in Heat and Mass Transfer},
+  year      = {2025},
+  volume    = {166},
+  pages     = {109203},
+  publisher = {Elsevier},
+  doi       = {10.1016/j.icheatmasstransfer.2025.109203},
+  url       = {https://doi.org/10.1016/j.icheatmasstransfer.2025.109203},
+  eprint    = {2611.01462},
+  archivePrefix = {arXiv}
+}</pre>
+<p style="margin-top:36px;font-size:14px;color:var(--mute)">← <a href="vortex-shedding-suppression-elliptical-cylinder-rl.html">Vortex shedding suppression in elliptical cylinder via reinforcement learning</a> &nbsp;·&nbsp; <a href="toward-fully-stabilized-flow-control-drl.html">Toward fully stabilized flow control using deep reinforcement learning</a> →</p>
+</main>
+<footer id="contact"><div class="wrap">
+<div class="who"><b>Wang Jia</b><a href="mailto:jwcy0529@sjtu.edu.cn">jwcy0529@sjtu.edu.cn</a><p>Open to postdoctoral positions in scientific machine learning, AI for fluid mechanics, learning-based control and high-performance computing (HPC).</p></div>
+<ul><li><a href="https://scholar.google.com/citations?user=TPi-OOoAAAAJ">Google Scholar</a></li><li><a href="https://orcid.org/0009-0008-2786-397X">ORCID</a></li><li><a href="https://www.researchgate.net/profile/Wang-Jia-67">ResearchGate</a></li><li><a href="https://www.linkedin.com/in/wangjia666/">LinkedIn</a></li><li><a href="https://github.com/Jia-Wang-2026">GitHub</a></li><li><a href="../publications.bib">BibTeX</a></li><li><a href="../publications.json">JSON</a></li><li><a href="../CV.pdf">CV</a></li></ul>
+<small>© 2026 Wang Jia. Text and figures on this page may be quoted with attribution. Last updated 2026-11-22.</small>
+</div></footer>
+</body>
+</html>

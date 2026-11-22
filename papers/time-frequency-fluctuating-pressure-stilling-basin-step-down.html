@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Time-frequency characteristics of fluctuating pressure on the bottom of the stilling basin with step-down floor based on Hilbert–Huang Transform — Wang Jia</title>
+<meta name="description" content="Fluctuating pressure is an important feature of the bottom of a stilling basin with step-down floor. To analyze the frequency domain characteristics and energy distribution of this fluctuating pressure, the Hilbert–Huang transform (HHT) method is used. First, empirical mode decom…">
+<meta name="author" content="Jia, W., Diao, M., Jiang, L., &amp; Huang, G.">
+<link rel="canonical" href="https://jia-wang-2026.github.io/papers/time-frequency-fluctuating-pressure-stilling-basin-step-down.html">
+<meta name="robots" content="index, follow, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Time-frequency characteristics of fluctuating pressure on the bottom of the stilling basin with step-down floor based on Hilbert–Huang Transform">
+<meta property="og:description" content="Fluctuating pressure is an important feature of the bottom of a stilling basin with step-down floor. To analyze the frequency domain characteristics and energy distribution of this fluctuating pressure, the Hilbert–Huang transform (HHT) method is used. First, empirical mode decom…">
+<meta property="og:url" content="https://jia-wang-2026.github.io/papers/time-frequency-fluctuating-pressure-stilling-basin-step-down.html">
+<meta name="citation_title" content="Time-frequency characteristics of fluctuating pressure on the bottom of the stilling basin with step-down floor based on Hilbert–Huang Transform">
+<meta name="citation_author" content="Jia, Wang">
+<meta name="citation_author" content="Diao, M.">
+<meta name="citation_author" content="Jiang, L.">
+<meta name="citation_author" content="Huang, G.">
+<meta name="citation_publication_date" content="2021">
+<meta name="citation_journal_title" content="Mathematical Problems in Engineering">
+<meta name="citation_issn" content="1024-123X">
+<meta name="citation_volume" content="2021">
+<meta name="citation_firstpage" content="7246488">
+<meta name="citation_doi" content="10.1155/2021/7246488">
+<meta name="citation_publisher" content="Hindawi / Wiley">
+<meta name="citation_pdf_url" content="https://jia-wang-2026.github.io/papers/time-frequency-fluctuating-pressure-stilling-basin-step-down.pdf">
+<meta name="citation_abstract" content="Fluctuating pressure is an important feature of the bottom of a stilling basin with step-down floor. To analyze the frequency domain characteristics and energy distribution of this fluctuating pressure, the Hilbert–Huang transform (HHT) method is used. First, empirical mode decomposition is performed on the pressure fluctuation signal to obtain a number of intrinsic mode functions (IMFs), and then the Hilbert transformation is performed on each IMF to obtain the Hilbert spectrum and marginal spectrum for characterizing the pressure fluctuation signal. The results show that the fluctuating pressure signal of the stilling basin with step-down floor has obvious characteristics of low frequency and large amplitude. The dominant frequencies of the head and tail of the stilling basin are very prominent, and most of the energy is concentrated below 5.0 Hz; with the increase in the relative position of the measuring point, the energy distribution in stilling basin with step-down floor changes from high-frequency component to low-frequency component. The fluctuating pressure signal of the stilling basin with step-down floor has random amplitude modulation and frequency modulation. The marginal spectrum obtained by the HHT method can obtain the local characteristics of the signal more accurately and is more suitable for processing nonlinear and nonstationary signals.">
+<meta name="citation_keywords" content="stilling basin">
+<meta name="citation_keywords" content="step-down floor">
+<meta name="citation_keywords" content="fluctuating pressure">
+<meta name="citation_keywords" content="Hilbert–Huang transform">
+<meta name="citation_keywords" content="time-frequency analysis">
+<meta name="dc.title" content="Time-frequency characteristics of fluctuating pressure on the bottom of the stilling basin with step-down floor based on Hilbert–Huang Transform">
+<meta name="dc.creator" content="Jia, W., Diao, M., Jiang, L., &amp; Huang, G.">
+<meta name="dc.identifier" content="doi:10.1155/2021/7246488">
+<meta name="dc.date" content="2021">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FBFAF7;--bg2:#F4F1EA;--ink:#1B1C1E;--ink2:#3A3C40;--mute:#5B5E64;--faint:#8A8D93;--line:#E6E2DA;--acc:#1D4F8C;--acc2:#133561;--accbg:#EEF3F9;--card:#FFFFFF}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141516;--bg2:#1C1D1F;--ink:#ECEAE4;--ink2:#C9C6BE;--mute:#A3A09A;--faint:#7E7C77;--line:#2E2F32;--acc:#8FB4E6;--acc2:#B7D0F2;--accbg:#1E2A3B;--card:#1A1B1D}}
+:root[data-theme="dark"]{--bg:#141516;--bg2:#1C1D1F;--ink:#ECEAE4;--ink2:#C9C6BE;--mute:#A3A09A;--faint:#7E7C77;--line:#2E2F32;--acc:#8FB4E6;--acc2:#B7D0F2;--accbg:#1E2A3B;--card:#1A1B1D}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--acc)}a:hover{color:var(--acc2)}
+h1,h2,h3,.serif{font-family:"Source Serif 4",Georgia,"Times New Roman",serif;font-weight:600;letter-spacing:-0.005em}
+.wrap{max-width:1120px;margin:0 auto;padding-left:24px;padding-right:24px}
+nav.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 24px;padding-top:12px;padding-bottom:12px}
+nav.top .brand{font-family:"Source Serif 4",Georgia,serif;font-size:20px;font-weight:600;color:var(--ink);text-decoration:none}
+nav.top ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:4px 20px;font-size:14px;font-weight:500}
+nav.top ul a{color:var(--ink2);text-decoration:none;padding:6px 0;display:inline-block}
+nav.top ul a:hover{color:var(--acc)}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:6px;border:1px solid var(--line);color:var(--ink);text-decoration:none;font-weight:500;font-size:14px;background:var(--card)}
+.btn:hover{border-color:var(--faint);color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn.primary:hover{color:var(--bg);opacity:.9}
+.hero{padding-top:72px;padding-bottom:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr));gap:48px;align-items:center}
+.hero .eyebrow{margin:0 0 20px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);font-weight:600}
+.hero h1{margin:0 0 20px;font-size:clamp(40px,6vw,56px);line-height:1.05}
+.hero .tag{margin:0 0 16px;font-family:"Source Serif 4",Georgia,serif;font-size:clamp(20px,2.2vw,24px);line-height:1.35;color:var(--ink2);text-wrap:pretty}
+.hero .alias{margin:0 0 22px;font-size:15px;color:var(--mute)}
+.hero .links{display:flex;flex-wrap:wrap;gap:10px}
+.hero figure{margin:0;display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.hero .portrait{width:220px;height:220px;object-fit:cover;border-radius:8px;border:1px solid var(--line)}
+.hero .flow{width:100%;max-width:520px;height:auto;border-radius:8px;border:1px solid var(--line)}
+.hero figcaption{font-size:13px;color:var(--mute);max-width:520px}
+.band{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
+.band .wrap{padding-top:40px;padding-bottom:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:32px 48px}
+.band p.lead{margin:0;font-size:17px;line-height:1.6;text-wrap:pretty;grid-column:1/-1}
+@media(min-width:960px){.band p.lead{grid-column:span 2}}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.stats b{display:block;font-family:"Source Serif 4",Georgia,serif;font-size:36px;font-weight:600;line-height:1}
+.stats span{display:block;margin-top:4px;font-size:13px;color:var(--mute)}
+section.sec{padding:64px 0 16px}
+section.sec>.wrap>h2{margin:0 0 12px;font-size:clamp(28px,3.4vw,36px);line-height:1.15}
+.intro{margin:0 0 36px;max-width:760px;font-size:17px;color:var(--ink2);text-wrap:pretty}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(480px,100%),1fr));gap:28px}
+.card{display:flex;flex-direction:column;gap:12px;align-self:start;padding:22px;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+.card img{width:100%;height:auto;border-radius:6px;border:1px solid var(--line)}
+.card .kicker{margin:0;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);font-weight:600}
+.card h3{margin:0;font-size:22px;line-height:1.2}
+.card p{margin:0;font-size:15px;color:var(--ink2)}
+.pubhead{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px;margin-bottom:24px}
+.pubhead p{margin:6px 0 0;font-size:15px;color:var(--mute)}
+.pubhead .dl{display:flex;flex-wrap:wrap;gap:10px}
+h3.group{margin:28px 0 0;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);font-weight:600;font-family:Inter,system-ui,sans-serif}
+ol.pubs{list-style:none;margin:12px 0 0;padding:0;border-top:1px solid var(--line)}
+ol.pubs li{display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+ol.pubs .yr{font-family:"Source Serif 4",Georgia,serif;font-size:15px;color:var(--faint);padding-top:3px}
+ol.pubs .ttl{font-family:"Source Serif 4",Georgia,serif;font-size:19px;font-weight:600;line-height:1.3;color:var(--ink);text-decoration:none}
+ol.pubs .ttl:hover{color:var(--acc)}
+ol.pubs .cite{margin:6px 0 0;font-size:14px;color:var(--ink2)}
+ol.pubs .cite .flag{color:var(--acc);font-weight:500}
+ol.pubs .hl{margin:6px 0 0;font-size:14px;color:var(--mute)}
+ol.pubs .acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;font-size:12.5px}
+ol.pubs .acts a,ol.pubs .acts summary{display:inline-flex;align-items:center;min-height:30px;padding:0 10px;border-radius:4px;background:var(--bg2);color:var(--ink2);text-decoration:none;cursor:pointer;list-style:none;border:1px solid transparent}
+ol.pubs .acts summary::-webkit-details-marker{display:none}
+ol.pubs .acts a:hover,ol.pubs .acts summary:hover{border-color:var(--faint)}
+ol.pubs .acts details{display:contents}
+ol.pubs .acts details[open]>summary{background:var(--accbg);color:var(--acc)}
+ol.pubs .acts details>div{flex-basis:100%;width:100%;order:9;margin-top:4px}
+ol.pubs .abs{margin:0;padding:14px 16px;border-radius:6px;background:var(--bg2);font-size:14.5px;line-height:1.6;color:var(--ink2);text-wrap:pretty}
+ol.pubs pre{margin:0;padding:14px 16px;border-radius:6px;background:var(--bg2);font:12.5px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-x:auto;color:var(--ink2)}
+ol.pubs.compact li{padding:14px 0}
+ol.pubs.compact .cite{margin:0;font-size:14px}
+.two{display:flex;flex-direction:column;gap:56px}
+.two h2{margin:0 0 16px;font-size:28px}
+.soft{display:flex;flex-direction:column;gap:6px;padding:18px;border:1px solid var(--line);border-radius:10px;background:var(--card);margin-bottom:14px}
+.soft a{font-weight:600;text-decoration:none}
+.soft p{margin:0;font-size:14px;color:var(--ink2)}
+dl.bg{margin:0 0 20px;display:grid;grid-template-columns:110px minmax(0,1fr);gap:10px 16px;font-size:14px}
+dl.bg dt{color:var(--faint)}dl.bg dd{margin:0}
+footer{margin-top:56px;border-top:1px solid var(--line);background:var(--bg2)}
+footer .wrap{padding-top:40px;padding-bottom:40px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 32px;font-size:14px;color:var(--ink2)}
+footer .who{display:flex;flex-direction:column;gap:6px;max-width:560px}
+footer .who b{font-family:"Source Serif 4",Georgia,serif;font-size:18px;font-weight:600;color:var(--ink)}
+footer .who p{margin:0;color:var(--mute)}
+footer ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 20px;align-content:flex-start}
+footer small{flex-basis:100%;color:var(--faint);font-size:12.5px}
+/* paper page */
+.paper{padding:56px 0 24px;max-width:800px}
+.paper .crumb{font-size:14px;margin:0 0 24px}
+.paper h1{font-size:clamp(28px,4vw,40px);line-height:1.15;margin:0 0 16px}
+.paper .meta{font-size:16px;color:var(--ink2);margin:0 0 8px}
+.paper .doi{font-size:14px;margin:0 0 28px}
+.paper h2{font-size:20px;margin:32px 0 10px}
+.paper p.abs{font-size:16px;line-height:1.65;text-wrap:pretty}
+.paper .kw{display:flex;flex-wrap:wrap;gap:8px;font-size:13px}
+.paper .kw span{padding:4px 10px;border-radius:4px;background:var(--bg2);color:var(--ink2)}
+.paper pre{padding:14px 16px;border-radius:6px;background:var(--bg2);font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-x:auto}
+.paper .ctas{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}
+.paper .cite-box{padding:14px 16px;border-radius:6px;background:var(--bg2);font-size:14.5px;line-height:1.6}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ScholarlyArticle", "@id": "https://doi.org/10.1155/2021/7246488", "url": "https://jia-wang-2026.github.io/papers/time-frequency-fluctuating-pressure-stilling-basin-step-down.html", "headline": "Time-frequency characteristics of fluctuating pressure on the bottom of the stilling basin with step-down floor based on Hilbert–Huang Transform", "name": "Time-frequency characteristics of fluctuating pressure on the bottom of the stilling basin with step-down floor based on Hilbert–Huang Transform", "datePublished": "2021", "inLanguage": "en", "author": [{"@type": "Person", "name": "Wang Jia", "givenName": "Wang", "familyName": "Jia", "alternateName": ["Jia, W.", "贾旺"], "@id": "https://orcid.org/0009-0008-2786-397X", "sameAs": ["https://orcid.org/0009-0008-2786-397X", "https://scholar.google.com/citations?user=TPi-OOoAAAAJ", "https://www.researchgate.net/profile/Wang-Jia-67"]}, {"@type": "Person", "name": "M. Diao", "givenName": "M.", "familyName": "Diao"}, {"@type": "Person", "name": "L. Jiang", "givenName": "L.", "familyName": "Jiang"}, {"@type": "Person", "name": "G. Huang", "givenName": "G.", "familyName": "Huang"}], "keywords": "stilling basin, step-down floor, fluctuating pressure, Hilbert–Huang transform, time-frequency analysis", "abstract": "Fluctuating pressure is an important feature of the bottom of a stilling basin with step-down floor. To analyze the frequency domain characteristics and energy distribution of this fluctuating pressure, the Hilbert–Huang transform (HHT) method is used. First, empirical mode decomposition is performed on the pressure fluctuation signal to obtain a number of intrinsic mode functions (IMFs), and then the Hilbert transformation is performed on each IMF to obtain the Hilbert spectrum and marginal spectrum for characterizing the pressure fluctuation signal. The results show that the fluctuating pressure signal of the stilling basin with step-down floor has obvious characteristics of low frequency and large amplitude. The dominant frequencies of the head and tail of the stilling basin are very prominent, and most of the energy is concentrated below 5.0 Hz; with the increase in the relative position of the measuring point, the energy distribution in stilling basin with step-down floor changes from high-frequency component to low-frequency component. The fluctuating pressure signal of the stilling basin with step-down floor has random amplitude modulation and frequency modulation. The marginal spectrum obtained by the HHT method can obtain the local characteristics of the signal more accurately and is more suitable for processing nonlinear and nonstationary signals.", "sameAs": ["https://doi.org/10.1155/2021/7246488"], "identifier": {"@type": "PropertyValue", "propertyID": "DOI", "value": "10.1155/2021/7246488"}, "isPartOf": {"@type": "PublicationVolume", "volumeNumber": "2021", "isPartOf": {"@type": "Periodical", "name": "Mathematical Problems in Engineering", "issn": "1024-123X"}}, "pageStart": "7246488", "publisher": {"@type": "Organization", "name": "Hindawi / Wiley"}}</script>
+</head>
+<body>
+<nav class="top" aria-label="Primary"><div class="wrap">
+<a class="brand" href="../index.html">Wang Jia</a>
+<ul><li><a href="../index.html#research">Research</a></li><li><a href="../index.html#publications">Publications</a></li><li><a href="../index.html#earlier">Master's research</a></li><li><a href="../index.html#cv">Background</a></li><li><a href="../index.html#contact">Contact</a></li></ul>
+</div></nav>
+<main class="wrap paper">
+<p class="crumb"><a href="../index.html">Wang Jia</a> › <a href="../index.html#publications">Publications</a> › 2021</p>
+<h1>Time-frequency characteristics of fluctuating pressure on the bottom of the stilling basin with step-down floor based on Hilbert–Huang Transform</h1>
+
+<p class="meta"><strong>Jia, W.</strong>, Diao, M., Jiang, L., &amp; Huang, G. (2021). <em>Mathematical Problems in Engineering</em>, 2021, 7246488.</p>
+<p class="doi">DOI: <a href="https://doi.org/10.1155/2021/7246488">10.1155/2021/7246488</a></p>
+<div class="ctas"><a class="btn primary" href="https://doi.org/10.1155/2021/7246488" rel="noopener">Publisher version (DOI)</a><a class="btn" href="../papers/time-frequency-fluctuating-pressure-stilling-basin-step-down.pdf">PDF</a><a class="btn" href="../publications.bib">All BibTeX</a></div>
+<h2>Abstract</h2><p class="abs">Fluctuating pressure is an important feature of the bottom of a stilling basin with step-down floor. To analyze the frequency domain characteristics and energy distribution of this fluctuating pressure, the Hilbert–Huang transform (HHT) method is used. First, empirical mode decomposition is performed on the pressure fluctuation signal to obtain a number of intrinsic mode functions (IMFs), and then the Hilbert transformation is performed on each IMF to obtain the Hilbert spectrum and marginal spectrum for characterizing the pressure fluctuation signal. The results show that the fluctuating pressure signal of the stilling basin with step-down floor has obvious characteristics of low frequency and large amplitude. The dominant frequencies of the head and tail of the stilling basin are very prominent, and most of the energy is concentrated below 5.0 Hz; with the increase in the relative position of the measuring point, the energy distribution in stilling basin with step-down floor changes from high-frequency component to low-frequency component. The fluctuating pressure signal of the stilling basin with step-down floor has random amplitude modulation and frequency modulation. The marginal spectrum obtained by the HHT method can obtain the local characteristics of the signal more accurately and is more suitable for processing nonlinear and nonstationary signals.</p>
+<h2>In one paragraph</h2><p class="abs">Time–frequency characteristics of bottom pressure fluctuations in a stilling basin with a step-down floor, analysed with the Hilbert–Huang transform.</p>
+<h2>Keywords</h2>
+<div class="kw"><span>stilling basin</span><span>step-down floor</span><span>fluctuating pressure</span><span>Hilbert–Huang transform</span><span>time-frequency analysis</span></div>
+<h2>Cite this paper</h2>
+<p class="cite-box">Jia, W., Diao, M., Jiang, L., &amp; Huang, G. (2021). Time-frequency characteristics of fluctuating pressure on the bottom of the stilling basin with step-down floor based on Hilbert–Huang Transform. Mathematical Problems in Engineering, 2021, 7246488. https://doi.org/10.1155/2021/7246488</p>
+<h2 id="bibtex">BibTeX</h2>
+<pre>@article{jia2021timefrequency,
+  author    = {Jia, Wang and Diao, M. and Jiang, L. and Huang, G.},
+  title     = {Time-frequency characteristics of fluctuating pressure on the bottom of the stilling basin with step-down floor based on Hilbert–Huang Transform},
+  journal   = {Mathematical Problems in Engineering},
+  year      = {2021},
+  volume    = {2021},
+  pages     = {7246488},
+  publisher = {Hindawi / Wiley},
+  doi       = {10.1155/2021/7246488},
+  url       = {https://doi.org/10.1155/2021/7246488}
+}</pre>
+<p style="margin-top:36px;font-size:14px;color:var(--mute)">← <a href="fluctuating-characteristics-stilling-basin-hht.html">Fluctuating characteristics of the stilling basin with a negative step based on Hilbert-Huang Transform</a> &nbsp;·&nbsp; <a href="stilling-basin-type-high-head-tailings-reservoir.html">Study on the stilling basin type of high-head tailings reservoir off-site flood discharge system</a> →</p>
+</main>
+<footer id="contact"><div class="wrap">
+<div class="who"><b>Wang Jia</b><a href="mailto:jwcy0529@sjtu.edu.cn">jwcy0529@sjtu.edu.cn</a><p>Open to postdoctoral positions in scientific machine learning, AI for fluid mechanics, learning-based control and high-performance computing (HPC).</p></div>
+<ul><li><a href="https://scholar.google.com/citations?user=TPi-OOoAAAAJ">Google Scholar</a></li><li><a href="https://orcid.org/0009-0008-2786-397X">ORCID</a></li><li><a href="https://www.researchgate.net/profile/Wang-Jia-67">ResearchGate</a></li><li><a href="https://www.linkedin.com/in/wangjia666/">LinkedIn</a></li><li><a href="https://github.com/Jia-Wang-2026">GitHub</a></li><li><a href="../publications.bib">BibTeX</a></li><li><a href="../publications.json">JSON</a></li><li><a href="../CV.pdf">CV</a></li></ul>
+<small>© 2026 Wang Jia. Text and figures on this page may be quoted with attribution. Last updated 2026-11-22.</small>
+</div></footer>
+</body>
+</html>
